@@ -18,7 +18,9 @@ module.exports = fountain.Base.extend({
   },
 
   composing: function () {
-    this.composeWith('fountain-gulp', { options: this.props });
+    this.composeWith('fountain-gulp', { options: this.props }, {
+      local: require.resolve('generator-fountain-gulp/generators/app')
+    });
   },
 
   writing: function () {
