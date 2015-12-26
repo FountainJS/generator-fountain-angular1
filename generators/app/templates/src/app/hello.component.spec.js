@@ -1,6 +1,6 @@
 <% if (modules) { -%>
 import angular from 'angular';
-import angularMock from 'angular-mocks';
+import 'angular-mocks';
 import { app } from '../index';
 <% } -%>
 
@@ -12,6 +12,7 @@ describe('hello component', function() {
 <% } -%>
   it('should render hello world', angular.mock.inject(function($rootScope, $compile) {
     const element = $compile('<hello>Loading...</hello>')($rootScope);
+    $rootScope.$digest();
     const h1 = element.find('h1');
     expect(h1.html()).toEqual('Hello World!');
   }));

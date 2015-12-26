@@ -1,11 +1,11 @@
 <% if (modules) { -%>
 export const hello = {
-  template: `<h1>Hello World!</h1>`
+  templateUrl: 'app/hello.html'
 };
 <% } else { -%>
 angular
   .module('app')
   .component('hello', {
-    template: `<h1>Hello World!</h1>`
+    templateUrl: 'app/hello.html'
   });
 <% } -%>

@@ -9,10 +9,11 @@ module.exports = fountain.Base.extend({
   configuring: function () {
     this.mergeJson('package.json', {
       dependencies: {
-        angular: '^1.5.0-beta.2'
+        angular: '^1.5.0-rc.0'
       },
       devDependencies: {
-        'angular-mocks': '^1.5.0-beta.2'
+        'angular-mocks': '^1.5.0-rc.0',
+        'gulp-angular-templatecache': '^1.8.0'
       }
     });
   },
@@ -24,10 +25,12 @@ module.exports = fountain.Base.extend({
   },
 
   writing: function () {
+    const props = { modules: this.props.modules !== 'inject' };
+
     this.fs.copyTpl(
       this.templatePath('src'),
       this.destinationPath('src'),
-      { modules: this.props.modules !== 'inject' }
+      props
     );
   }
 });
