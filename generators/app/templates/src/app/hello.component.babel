@@ -1,5 +1,5 @@
 <% if (modules !== 'inject') { -%>
-module.exports = {
+export const hello = {
   templateUrl: 'app/hello.html'
 };
 <% } else { -%>

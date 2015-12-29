@@ -1,7 +1,7 @@
 <% if (modules !== 'inject') { -%>
-var angular = require('angular');
-require('angular-mocks');
-var app = require('../index');
+import angular from 'angular';
+import 'angular-mocks';
+import { app } from '../index';
 <% } -%>
 
 describe('hello component', function() {
@@ -11,9 +11,9 @@ describe('hello component', function() {
   beforeEach(angular.mock.module('app'));
 <% } -%>
   it('should render hello world', angular.mock.inject(function($rootScope, $compile) {
-    var element = $compile('<hello>Loading...</hello>')($rootScope);
+    const element = $compile('<hello>Loading...</hello>')($rootScope);
     $rootScope.$digest();
-    var h1 = element.find('h1');
+    const h1 = element.find('h1');
     expect(h1.html()).toEqual('Hello World!');
   }));
 });

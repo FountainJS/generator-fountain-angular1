@@ -1,14 +1,13 @@
 <% if (modules !== 'inject') { -%>
-var angular = require('angular');
+import angular from 'angular';
 
-var hello = require('./app/hello.component');
+import { hello } from './app/hello.component';
 
 <% if (modules === 'webpack') { -%>
-require('./index.scss');
+import './index.scss';
 
 <% } -%>
-var app = 'app';
-module.exports = app;
+export const app = 'app';
 
 angular
   .module(app, [])
