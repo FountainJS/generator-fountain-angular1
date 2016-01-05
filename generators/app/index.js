@@ -1,3 +1,5 @@
+'use strict';
+
 const fountain = require('fountain-generator');
 
 module.exports = fountain.Base.extend({
@@ -27,15 +29,20 @@ module.exports = fountain.Base.extend({
   writing() {
     const files = [
       'src/index.html',
-      'src/index.js',
       'src/index.css',
+      'src/index.js',
       'src/app/hello.component.js',
       'src/app/hello.component.spec.js',
       'src/app/hello.html'
     ];
 
+    let templateUrl = 'app/hello.html';
+    if (this.props.modules === 'systemjs') {
+      templateUrl = 'src/app/hello.html';
+    }
+
     files.map(file => {
-      this.copyTemplate(file, file);
+      this.copyTemplate(file, file, { templateUrl });
     });
   }
 });

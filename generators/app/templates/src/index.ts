@@ -1,5 +1,7 @@
+/// <reference path="../typings/tsd.d.ts" />
+
 <% if (modules !== 'inject') { -%>
-import angular from 'angular';
+import * as angular from 'angular';
 
 import { hello } from './app/hello.component';
 
@@ -7,7 +9,7 @@ import { hello } from './app/hello.component';
 import './index.scss';
 
 <% } -%>
-export const app = 'app';
+export const app: string = 'app';
 
 angular
   .module(app, [])

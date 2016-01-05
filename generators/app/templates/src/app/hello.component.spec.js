@@ -1,14 +1,20 @@
 <% if (modules !== 'inject') { -%>
 var angular = require('angular');
 require('angular-mocks');
-var app = require('../index');
+var hello = require('./hello.component');
 <% } -%>
 
 describe('hello component', function() {
 <% if (modules !== 'inject') { -%>
-  beforeEach(angular.mock.module(app));
+  beforeEach(function() {
+    angular
+      .module('hello', ['<%- templateUrl %>'])
+      .component('hello', hello);
+    angular.mock.module('hello');
+  });
 <% } else { -%>
   beforeEach(angular.mock.module('app'));
+  beforeEach(angular.mock.module('<%- templateUrl %>'));
 <% } -%>
   it('should render hello world', angular.mock.inject(function($rootScope, $compile) {
     var element = $compile('<hello>Loading...</hello>')($rootScope);

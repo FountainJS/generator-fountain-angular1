@@ -1,11 +1,11 @@
-<% if (modules !== 'inject') { -%>
-module.exports = {
-  templateUrl: 'app/hello.html'
-};
-<% } else { -%>
+<% if (modules === 'inject') { -%>
 angular
   .module('app')
   .component('hello', {
-    templateUrl: 'app/hello.html'
+    templateUrl: '<%- templateUrl %>'
   });
+<% } else { -%>
+module.exports = {
+  templateUrl: '<%- templateUrl %>'
+};
 <% } -%>

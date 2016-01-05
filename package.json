@@ -26,6 +26,10 @@
     "generator-fountain-gulp": "^0.1.0"
   },
   "devDependencies": {
+    "chai": "^3.4.1",
+    "babel-eslint": "^5.0.0-beta6",
+    "eslint-config-xo-space": "^0.8.0",
+    "eslint-plugin-babel": "^3.0.0",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-eslint": "^1.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
@@ -37,5 +41,14 @@
   "scripts": {
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "xo-space/esnext",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "babel/object-curly-spacing": [2, "always"]
+    }
+  }
 }

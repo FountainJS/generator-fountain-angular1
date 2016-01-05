@@ -1,16 +1,24 @@
+/// <reference path="../../typings/tsd.d.ts" />
+
 <% if (modules !== 'inject') { -%>
-import angular from 'angular';
+import * as angular from 'angular';
 import 'angular-mocks';
-import { app } from '../index';
+import { hello } from './hello.component';
 <% } -%>
 
 describe('hello component', function() {
 <% if (modules !== 'inject') { -%>
-  beforeEach(angular.mock.module(app));
+  beforeEach(function() {
+    angular
+      .module('hello', ['<%- templateUrl %>'])
+      .component('hello', hello);
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('hello');
+  });
 <% } else { -%>
   beforeEach(angular.mock.module('app'));
+  beforeEach(angular.mock.module('<%- templateUrl %>'));
 <% } -%>
-  it('should render hello world', angular.mock.inject(function($rootScope, $compile) {
+  it('should render hello world', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(function($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
     const element = $compile('<hello>Loading...</hello>')($rootScope);
     $rootScope.$digest();
     const h1 = element.find('h1');

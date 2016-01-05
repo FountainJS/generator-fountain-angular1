@@ -17,15 +17,15 @@ function eslintCheck() {
 }
 
 function istanbulCover() {
-  return gulp.src('generators/**/index.js')
+  return gulp.src('generators/*/index.js')
     .pipe(istanbul({ includeUntested: true }))
     .pipe(istanbul.hookRequire());
 }
 
 function mochaTest() {
   return gulp.src('test/**/*.js')
-    .pipe(mocha({reporter: 'spec'}))
-    .once('error', function errorHandler(err) {
+    .pipe(mocha({ reporter: 'spec' }))
+    .once('error', err => {
       gutil.log(gutil.colors.red('[Mocha]'), err.toString());
       process.exit(1);
     })
