@@ -1,6 +1,6 @@
 {
   "name": "generator-fountain-angular1",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Yeoman 'fountain' generator to start a webapp with Angular 1",
   "homepage": "",
   "repository": "fountainjs/generator-fountain-angular1",
