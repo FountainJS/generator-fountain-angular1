@@ -2,8 +2,8 @@
 var angular = require('angular');
 require('angular-mocks');
 var hello = require('./hello.component');
-<% } -%>
 
+<% } -%>
 describe('hello component', function() {
 <% if (modules !== 'inject') { -%>
   beforeEach(function() {
