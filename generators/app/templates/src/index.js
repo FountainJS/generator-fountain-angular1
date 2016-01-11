@@ -4,7 +4,7 @@ var angular = require('angular');
 var hello = require('./app/hello.component');
 
 <% if (modules === 'webpack') { -%>
-require('./index.scss');
+require('./index.<%- css %>');
 
 <% } -%>
 var app = 'app';

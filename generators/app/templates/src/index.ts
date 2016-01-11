@@ -6,7 +6,7 @@ import * as angular from 'angular';
 import { hello } from './app/hello.component';
 
 <% if (modules === 'webpack') { -%>
-import './index.scss';
+import './index.<%- css %>';
 
 <% } -%>
 export const app: string = 'app';
