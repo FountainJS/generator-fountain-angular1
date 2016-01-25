@@ -22,8 +22,8 @@
   ],
   "dependencies": {
     "lodash": "^3.10.1",
-    "fountain-generator": "^0.1.0",
-    "generator-fountain-gulp": "^0.1.0"
+    "fountain-generator": "^0.2.2",
+    "generator-fountain-gulp": "^0.2.2"
   },
   "devDependencies": {
     "chai": "^3.4.1",
