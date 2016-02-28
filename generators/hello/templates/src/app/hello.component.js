@@ -1,7 +1,7 @@
 <% if (modules === 'inject') { -%>
 angular
   .module('app')
-  .component('hello', {
+  .component('app', {
     templateUrl: '<%- templateUrl %>'
   });
 <% } else { -%>

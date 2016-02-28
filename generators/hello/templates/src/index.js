@@ -12,7 +12,7 @@ module.exports = app;
 
 angular
   .module(app, [])
-  .component('hello', hello);
+  .component('app', hello);
 <% } else { -%>
 angular
   .module('app', []);
