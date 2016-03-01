@@ -46,12 +46,6 @@
     "extends": "xo-space/esnext",
     "env": {
       "mocha": true
-    },
-    "rules": {
-      "babel/object-curly-spacing": [
-        2,
-        "always"
-      ]
     }
   }
 }
