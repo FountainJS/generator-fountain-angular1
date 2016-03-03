@@ -7,7 +7,7 @@ var header = require('./app/header');
 var title = require('./app/title');
 var footer = require('./app/footer');
 
-require('./index.scss');
+require('./index.<%- css %>');
 
 angular
   .module('app', [techsModule])
