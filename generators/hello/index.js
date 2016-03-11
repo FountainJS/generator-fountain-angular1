@@ -16,8 +16,8 @@ module.exports = fountain.Base.extend({
     [
       'src/index.js',
       'src/index.css',
-      'src/app/hello.component.js',
-      'src/app/hello.component.spec.js',
+      'src/app/hello.js',
+      'src/app/hello.spec.js',
       'src/app/hello.html'
     ].map(file => this.copyTemplate(file, file, {templateUrl}));
   }
