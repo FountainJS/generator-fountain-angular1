@@ -1,9 +1,9 @@
 <% if (modules !== 'inject') { -%>
-import angular from 'angular';
-import 'angular-mocks';
-import {hello} from './hello.component';
-<% } -%>
+var angular = require('angular');
+require('angular-mocks');
+var hello = require('./hello.component');
 
+<% } -%>
 describe('hello component', function () {
 <% if (modules !== 'inject') { -%>
   beforeEach(function () {
@@ -17,9 +17,9 @@ describe('hello component', function () {
   beforeEach(angular.mock.module('<%- templateUrl %>'));
 <% } -%>
   it('should render hello world', angular.mock.inject(function ($rootScope, $compile) {
-    const element = $compile('<hello>Loading...</hello>')($rootScope);
+    var element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
     $rootScope.$digest();
-    const h1 = element.find('h1');
+    var h1 = element.find('h1');
     expect(h1.html()).toEqual('Hello World!');
   }));
 });
