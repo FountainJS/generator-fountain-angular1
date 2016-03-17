@@ -1,5 +1,5 @@
 angular
   .module('app')
-  .component('foutainTitle', {
+  .component('fountainTitle', {
     templateUrl: 'app/title.html'
   });
