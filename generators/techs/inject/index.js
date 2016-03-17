@@ -25,8 +25,7 @@ module.exports = fountain.Base.extend({
         'src/app/techs/techs.js',
         'src/app/techs/tech.spec.js',
         'src/app/techs/techs.spec.js',
-        'src/app/techs/techs.html',
-        'src/app/techs/index.js'
+        'src/app/techs/techs.html'
       ];
 
       files.map(file => {
