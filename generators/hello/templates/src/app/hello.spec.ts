@@ -1,18 +1,18 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 
 <% if (modules !== 'inject') { -%>
 import * as angular from 'angular';
 import 'angular-mocks';
-import { hello } from './hello.component';
+import {hello} from './hello';
 <% } -%>
 
 describe('hello component', function() {
 <% if (modules !== 'inject') { -%>
   beforeEach(function() {
     angular
-      .module('hello', ['<%- templateUrl %>'])
-      .component('hello', hello);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('hello');
+      .module('fountainHello', ['<%- templateUrl %>'])
+      .component('fountainHello', hello);
+    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainHello');
   });
 <% } else { -%>
   beforeEach(angular.mock.module('app'));

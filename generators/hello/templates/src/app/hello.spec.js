@@ -1,16 +1,16 @@
 <% if (modules !== 'inject') { -%>
 var angular = require('angular');
 require('angular-mocks');
-var hello = require('./hello.component');
+var hello = require('./hello');
 
 <% } -%>
 describe('hello component', function () {
 <% if (modules !== 'inject') { -%>
   beforeEach(function () {
     angular
-      .module('hello', ['<%- templateUrl %>'])
-      .component('hello', hello);
-    angular.mock.module('hello');
+      .module('fountainHello', ['<%- templateUrl %>'])
+      .component('fountainHello', hello);
+    angular.mock.module('fountainHello');
   });
 <% } else { -%>
   beforeEach(angular.mock.module('app'));

@@ -12,6 +12,6 @@ require('./index.<%- css %>');
 angular
   .module('app', [techsModule])
   .component('app', main)
-  .component('techsHeader', header)
-  .component('techsTitle', title)
-  .component('techsFooter', footer);
+  .component('fountainHeader', header)
+  .component('fountainTitle', title)
+  .component('fountainFooter', footer);

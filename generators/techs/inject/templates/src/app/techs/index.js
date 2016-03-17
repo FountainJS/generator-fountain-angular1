@@ -9,5 +9,5 @@ module.exports = techsModule;
 
 angular
   .module(techsModule, [])
-  .component('techsTech', tech)
-  .component('techsTechs', techs);
+  .component('fountainTech', tech)
+  .component('fountainTechs', techs);

@@ -1,9 +1,9 @@
-/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="../typings/main.d.ts" />
 
 <% if (modules !== 'inject') { -%>
 import * as angular from 'angular';
 
-import {hello} from './app/hello.component';
+import {hello} from './app/hello';
 
 <% if (modules === 'webpack') { -%>
 import './index.<%- css %>';

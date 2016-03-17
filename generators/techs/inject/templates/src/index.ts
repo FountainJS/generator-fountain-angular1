@@ -1,4 +1,4 @@
-import angular from 'angular';
+import * as angular from 'angular';
 
 import {techsModule} from './app/techs/index';
 
@@ -12,6 +12,9 @@ import './index.<%- css %>';
 angular
   .module('app', [techsModule])
   .component('app', main)
-  .component('techsHeader', header)
-  .component('techsTitle', title)
-  .component('techsFooter', footer);
+  .component('fountainHeader', header)
+  .component('fountainTitle', title)
+  .component('fountainFooter', footer);
+
+/// <reference path="../typings/main.d.ts" />
+

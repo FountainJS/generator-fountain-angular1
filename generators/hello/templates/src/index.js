@@ -1,7 +1,7 @@
 <% if (modules !== 'inject') { -%>
 var angular = require('angular');
 
-var hello = require('./app/hello.component');
+var hello = require('./app/hello');
 
 <% if (modules === 'webpack') { -%>
 require('./index.<%- css %>');

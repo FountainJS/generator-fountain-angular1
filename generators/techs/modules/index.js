@@ -1,3 +1,5 @@
+'use strict';
+
 const fountain = require('fountain-generator');
 
 module.exports = fountain.Base.extend({
@@ -21,14 +23,19 @@ module.exports = fountain.Base.extend({
         'src/app/techs/tech.js',
         'src/app/techs/tech.html',
         'src/app/techs/techs.js',
+        'src/app/techs/tech.spec.js',
+        'src/app/techs/techs.spec.js',
         'src/app/techs/techs.html'
       ];
 
-      if (this.props.modules !== 'inject') {
-        files.push('src/app/techs/index.js');
-      }
-
-      files.map(file => this.copyTemplate(file, file));
+      files.map(file => {
+        const prefix = this.props.modules === 'systemjs' ? 'src/' : '';
+        const templateUrl = file.replace(
+          /^src\/(.*\/)*(.*)\.(spec\.[A-z]+$)/,
+          `${prefix}$1$2.html`
+        );
+        this.copyTemplate(file, file, {templateUrl});
+      });
     },
 
     techs() {
