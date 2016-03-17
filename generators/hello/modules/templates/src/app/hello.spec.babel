@@ -1,21 +1,14 @@
-<% if (modules !== 'inject') { -%>
 import angular from 'angular';
 import 'angular-mocks';
 import {hello} from './hello';
-<% } -%>
 
 describe('hello component', () => {
-<% if (modules !== 'inject') { -%>
   beforeEach(() => {
     angular
       .module('fountainHello', ['<%- templateUrl %>'])
       .component('fountainHello', hello);
     angular.mock.module('fountainHello');
   });
-<% } else { -%>
-  beforeEach(angular.mock.module('app'));
-  beforeEach(angular.mock.module('<%- templateUrl %>'));
-<% } -%>
   it('should render hello world', angular.mock.inject(($rootScope, $compile) => {
     const element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
     $rootScope.$digest();

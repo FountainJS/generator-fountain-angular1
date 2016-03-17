@@ -1,4 +1,3 @@
-<% if (modules !== 'inject') { -%>
 var angular = require('angular');
 
 var hello = require('./app/hello');
@@ -13,7 +12,3 @@ module.exports = app;
 angular
   .module(app, [])
   .component('app', hello);
-<% } else { -%>
-angular
-  .module('app', []);
-<% } -%>
