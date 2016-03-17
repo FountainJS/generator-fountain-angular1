@@ -32,7 +32,7 @@ module.exports = fountain.Base.extend({
       files.map(file => {
         const prefix = this.props.modules === 'systemjs' ? 'src/' : '';
         const templateUrl = file.replace(
-          /^src\/(.*\/)*(.*)\.(spec\.[A-z]+$)/,
+          /^src\/(.*\/)*(.*)\.([A-z]+$)/,
           `${prefix}$1$2.html`
         );
         this.copyTemplate(file, file, {templateUrl});
