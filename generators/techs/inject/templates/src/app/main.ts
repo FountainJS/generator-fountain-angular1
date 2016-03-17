@@ -1,3 +1,5 @@
-angular.module('app').component('fountainMain', {
-  templateUrl: 'app/main.html'
-});
+angular
+  .module('app')
+  .component('fountainMain', {
+    templateUrl: 'app/main.html'
+  });

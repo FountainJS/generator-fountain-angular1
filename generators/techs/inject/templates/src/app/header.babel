@@ -1,3 +1,5 @@
-angular.module('app').component('fountainHeader', {
-  templateUrl: 'app/header.html'
-});
+angular
+  .module('app')
+  .component('fountainHeader', {
+    templateUrl: 'app/header.html'
+  });

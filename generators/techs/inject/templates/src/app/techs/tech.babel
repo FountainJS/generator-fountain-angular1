@@ -1,6 +1,8 @@
-angular.module('app').component('fountainTech', {
-  templateUrl: 'app/techs/tech.html',
-  bindings: {
-    tech: '<'
-  }
-});
+angular
+  .module('app')
+  .component('fountainTech', {
+    templateUrl: 'app/techs/tech.html',
+    bindings: {
+      tech: '<'
+    }
+  });

@@ -1,7 +1,9 @@
-angular.module('app').component('fountainTechs', {
-  templateUrl: 'app/techs/techs.html',
-  controller: TechsController
-});
+angular
+  .module('app')
+  .component('fountainTechs', {
+    templateUrl: 'app/techs/techs.html',
+    controller: TechsController
+  });
 
 function TechsController($http) {
   var vm = this;
