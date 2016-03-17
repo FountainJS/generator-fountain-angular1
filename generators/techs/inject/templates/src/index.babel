@@ -1,0 +1,6 @@
+import angular from 'angular';
+
+import './index.<%- css %>';
+
+angular
+  .module('app', []);
