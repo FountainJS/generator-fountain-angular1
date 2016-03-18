@@ -3,7 +3,7 @@
 describe('hello component', function() {
   beforeEach(angular.mock.module('app'));
   it('should render hello world', inject(function($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
-    const element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
+    const element = $compile('<app>Loading...</app>')($rootScope);
     $rootScope.$digest();
     const h1 = element.find('h1');
     expect(h1.html()).toEqual('Hello World!');
