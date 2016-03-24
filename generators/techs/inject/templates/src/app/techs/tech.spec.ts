@@ -1,8 +1,8 @@
 /// <reference path="../../../typings/main.d.ts" />
 
-describe('tech component', function () {
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
-    $provide.factory('fountainTech', function () {
+describe('tech component', () => {
+  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+    $provide.factory('fountainTech', () => {
       return {
         templateUrl: 'app/techs/tech.html'
       };
@@ -13,7 +13,7 @@ describe('tech component', function () {
     fixture: any;
   }
 
-  it('should render Gulp', inject(function ($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
+  it('should render Gulp', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const $scope: IMyScope = <IMyScope> $rootScope.$new();
     $scope.fixture = {
       key: 'gulp',

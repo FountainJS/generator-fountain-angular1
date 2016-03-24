@@ -1,27 +1,27 @@
 /// <reference path="../../typings/main.d.ts" />
 
-describe('main component', function () {
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
-    $provide.factory('fountainHeaderDirective', function () {
+describe('main component', () => {
+  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+    $provide.factory('fountainHeaderDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
-    $provide.factory('fountainTitleDirective', function () {
+  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+    $provide.factory('fountainTitleDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
-    $provide.factory('fountainTechsDirective', function () {
+  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+    $provide.factory('fountainTechsDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
-    $provide.factory('fountainFooterDirective', function () {
+  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+    $provide.factory('fountainFooterDirective', () => {
       return {};
     });
   }));
-  it('should render the header, title, techs and footer', inject(function ($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
+  it('should render the header, title, techs and footer', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<app>Loading...</app>')($rootScope);
     $rootScope.$digest();
     expect(element.find('fountain-header').length).toEqual(1);

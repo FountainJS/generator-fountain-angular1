@@ -28,15 +28,15 @@ const techsJson = [
   }
 ];
 
-describe('techs component', function () {
-  beforeEach(function () {
+describe('techs component', () => {
+  beforeEach(() => {
     angular
       .module('fountainTechs', ['<%- templateUrl %>'])
       .component('fountainTechs', techs);
     <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainTechs');
   });
 
-  it('should render 3 elements \<fountain-tech\>', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(function ($rootScope: ng.IRootScopeService, $compile: ng.ICompileService, $httpBackend: ng.IHttpBackendService) {
+  it('should render 3 elements \<fountain-tech\>', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService, $httpBackend: ng.IHttpBackendService) => {
     $httpBackend.when('GET', 'app/techs/techs.json').respond(techsJson);
     const element = $compile('<fountain-techs></fountain-techs>')($rootScope);
     $httpBackend.flush();
