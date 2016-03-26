@@ -4,15 +4,15 @@ import * as angular from 'angular';
 import 'angular-mocks';
 import {title} from './title';
 
-describe('title component', function () {
-  beforeEach(function () {
+describe('title component', () => {
+  beforeEach(() => {
     angular
       .module('fountainTitle', ['<%- templateUrl %>'])
       .component('fountainTitle', title);
     <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainTitle');
   });
 
-  it('should render \'Allo, \'Allo!', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(function ($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
+  it('should render \'Allo, \'Allo!', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<fountain-title></fountain-title>')($rootScope);
     $rootScope.$digest();
     const title = element.find('h1');

@@ -1,20 +1,20 @@
 describe('main component', function () {
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
+  beforeEach(module('app', function ($provide) {
     $provide.factory('fountainHeaderDirective', function () {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
+  beforeEach(module('app', function ($provide) {
     $provide.factory('fountainTitleDirective', function () {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
+  beforeEach(module('app', function ($provide) {
     $provide.factory('fountainTechsDirective', function () {
       return {};
     });
   }));
-  beforeEach(module('app', function ($provide: ng.auto.IProvideService) {
+  beforeEach(module('app', function ($provide) {
     $provide.factory('fountainFooterDirective', function () {
       return {};
     });

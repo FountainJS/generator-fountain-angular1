@@ -4,8 +4,8 @@ import * as angular from 'angular';
 import 'angular-mocks';
 import {tech} from './tech';
 
-describe('tech component', function () {
-  beforeEach(function () {
+describe('tech component', () => {
+  beforeEach(() => {
     angular
       .module('fountainTech', ['<%- templateUrl %>'])
       .component('fountainTech', tech);
@@ -16,7 +16,7 @@ describe('tech component', function () {
     fixture: any;
   }
 
-  it('should render Gulp', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(function ($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) {
+  it('should render Gulp', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const $scope: IMyScope = <IMyScope> $rootScope.$new();
     $scope.fixture = {
       key: 'gulp',
