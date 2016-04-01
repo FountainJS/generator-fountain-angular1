@@ -13,3 +13,5 @@ export const app: string = 'app';
 angular
   .module(app, [])
   .component('app', hello);
+
+angular.bootstrap(document, ['app']);

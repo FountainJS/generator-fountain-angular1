@@ -12,3 +12,5 @@ module.exports = app;
 angular
   .module(app, [])
   .component('app', hello);
+
+angular.bootstrap(document, ['app']);
