@@ -14,6 +14,6 @@ describe('footer component', function () {
     var element = $compile('<fountain-footer></fountain-footer>')($rootScope);
     $rootScope.$digest();
     var footer = element.find('a');
-    expect(footer.html().trim()).toEqual('FountainJS team');
+    expect(footer.html().trim()).to.equal('FountainJS team');
   }));
 });

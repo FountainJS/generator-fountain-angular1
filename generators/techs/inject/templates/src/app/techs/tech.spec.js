@@ -18,6 +18,6 @@ describe('tech component', function () {
     var element = $compile('<fountain-tech tech=\"fixture\"></fountain-tech>')($scope);
     $scope.$digest();
     var tech = element.find('h3');
-    expect(tech.html().trim()).toEqual('Gulp');
+    expect(tech.html().trim()).to.equal('Gulp');
   }));
 });

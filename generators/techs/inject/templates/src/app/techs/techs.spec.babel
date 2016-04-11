@@ -31,6 +31,6 @@ describe('techs component', () => {
     $httpBackend.flush();
     $rootScope.$digest();
     const techs = element.find('fountain-tech');
-    expect(techs.length).toEqual(3);
+    expect(techs.length).to.equal(3);
   }));
 });
