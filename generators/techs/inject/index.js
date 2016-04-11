@@ -32,7 +32,7 @@ module.exports = fountain.Base.extend({
         'src/app/techs/techs.html'
       ];
 
-      files.map(file => {
+      files.forEach(file => {
         const templateUrl = file.replace(
           /^src\/(.*\/)*(.*)\.(spec\.[A-z]+$)/,
           `$1$2.html`
