@@ -10,6 +10,6 @@ describe('title component', function () {
     var element = $compile('<fountain-title></fountain-title>')($rootScope);
     $rootScope.$digest();
     var title = element.find('h1');
-    expect(title.html().trim()).toEqual('\'Allo, \'Allo!');
+    expect(title.html().trim()).to.equal('\'Allo, \'Allo!');
   }));
 });

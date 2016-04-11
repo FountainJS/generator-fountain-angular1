@@ -13,9 +13,9 @@ describe('main component', function () {
   it('should render the header, title, techs and footer', angular.mock.inject(function ($rootScope, $compile) {
     var element = $compile('<app>Loading...</app>')($rootScope);
     $rootScope.$digest();
-    expect(element.find('fountain-header').length).toEqual(1);
-    expect(element.find('fountain-title').length).toEqual(1);
-    expect(element.find('fountain-techs').length).toEqual(1);
-    expect(element.find('fountain-footer').length).toEqual(1);
+    expect(element.find('fountain-header').length).to.equal(1);
+    expect(element.find('fountain-title').length).to.equal(1);
+    expect(element.find('fountain-techs').length).to.equal(1);
+    expect(element.find('fountain-footer').length).to.equal(1);
   }));
 });
