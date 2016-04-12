@@ -9,7 +9,7 @@ describe('tech component', () => {
     angular
       .module('fountainTech', ['<%- templateUrl %>'])
       .component('fountainTech', tech);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainTech');
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('fountainTech');
   });
 
   interface IMyScope extends ng.IScope {

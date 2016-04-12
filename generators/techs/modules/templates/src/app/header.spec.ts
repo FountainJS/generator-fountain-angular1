@@ -9,7 +9,7 @@ describe('header component', () => {
     angular
       .module('fountainHeader', ['<%- templateUrl %>'])
       .component('fountainHeader', header);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainHeader');
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('fountainHeader');
   });
 
   it('should render \'Foutain Generator\'', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {

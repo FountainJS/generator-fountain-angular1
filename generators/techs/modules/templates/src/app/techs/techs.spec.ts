@@ -33,7 +33,7 @@ describe('techs component', () => {
     angular
       .module('fountainTechs', ['<%- templateUrl %>'])
       .component('fountainTechs', techs);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainTechs');
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('fountainTechs');
   });
 
   it('should render 3 elements \<fountain-tech\>', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService, $httpBackend: ng.IHttpBackendService) => {

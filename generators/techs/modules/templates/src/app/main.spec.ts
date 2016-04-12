@@ -9,7 +9,7 @@ describe('main component', () => {
     angular
       .module('app', ['<%- templateUrl %>'])
       .component('app', main);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('app');
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('app');
   });
 
   it('should render the header, title, techs and footer', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
