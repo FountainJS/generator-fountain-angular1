@@ -9,7 +9,7 @@ describe('hello component', () => {
     angular
       .module('fountainHello', ['<%- templateUrl %>'])
       .component('fountainHello', hello);
-    <%- modules !== 'systemjs' ? 'angular.mock.' : 'angular.' %>module('fountainHello');
+    <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('fountainHello');
   });
   it('should render hello world', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
