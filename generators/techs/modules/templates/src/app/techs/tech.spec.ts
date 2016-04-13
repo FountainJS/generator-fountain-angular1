@@ -25,7 +25,7 @@ describe('tech component', () => {
       text1: 'The streaming build system',
       text2: 'Automate and enhance your workflow'
     };
-    const element = $compile('<fountain-tech tech=\"fixture\"></fountain-tech>')($scope);
+    const element = $compile('<fountain-tech tech="fixture"></fountain-tech>')($scope);
     $scope.$digest();
     const tech = element.find('h3');
     expect(tech.html().trim()).to.equal('Gulp');

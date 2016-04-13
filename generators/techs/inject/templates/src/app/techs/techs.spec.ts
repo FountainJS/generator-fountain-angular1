@@ -27,7 +27,7 @@ const techsJson = [
 describe('techs component', () => {
   beforeEach(angular.mock.module('app'));
 
-  it('should render 3 elements \<fountain-tech\>', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService, $httpBackend: ng.IHttpBackendService) => {
+  it('should render 3 elements <fountain-tech>', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService, $httpBackend: ng.IHttpBackendService) => {
     $httpBackend.when('GET', 'app/techs/techs.json').respond(techsJson);
     const element = $compile('<fountain-techs></fountain-techs>')($rootScope);
     $httpBackend.flush();
