@@ -33,7 +33,7 @@ describe('techs component', function () {
       .component('fountainTechs', techs);
     angular.mock.module('fountainTechs');
   });
-  it('should render 3 elements \<fountain-tech\>', angular.mock.inject(function ($rootScope, $compile, $httpBackend) {
+  it('should render 3 elements <fountain-tech>', angular.mock.inject(function ($rootScope, $compile, $httpBackend) {
     $httpBackend.when('GET', 'app/techs/techs.json').respond(techsJson);
     var element = $compile('<fountain-techs></fountain-techs>')($rootScope);
     $httpBackend.flush();
