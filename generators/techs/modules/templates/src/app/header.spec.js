@@ -14,6 +14,6 @@ describe('header component', function () {
     var element = $compile('<fountain-header></fountain-header>')($rootScope);
     $rootScope.$digest();
     var header = element.find('a');
-    expect(header.html().trim()).to.equal('Foutain Generator');
+    expect(header.html().trim()).toEqual('Foutain Generator');
   }));
 });

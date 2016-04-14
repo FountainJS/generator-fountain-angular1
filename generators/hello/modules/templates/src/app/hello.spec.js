@@ -13,6 +13,6 @@ describe('hello component', function () {
     var element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
     $rootScope.$digest();
     var h1 = element.find('h1');
-    expect(h1.html()).to.equal('Hello World!');
+    expect(h1.html()).toEqual('Hello World!');
   }));
 });
