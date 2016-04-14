@@ -24,9 +24,9 @@ describe('main component', () => {
   it('should render the header, title, techs and footer', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<app>Loading...</app>')($rootScope);
     $rootScope.$digest();
-    expect(element.find('fountain-header').length).to.equal(1);
-    expect(element.find('fountain-title').length).to.equal(1);
-    expect(element.find('fountain-techs').length).to.equal(1);
-    expect(element.find('fountain-footer').length).to.equal(1);
+    expect(element.find('fountain-header').length).toEqual(1);
+    expect(element.find('fountain-title').length).toEqual(1);
+    expect(element.find('fountain-techs').length).toEqual(1);
+    expect(element.find('fountain-footer').length).toEqual(1);
   }));
 });

@@ -15,6 +15,6 @@ describe('hello component', () => {
     const element = $compile('<fountain-hello>Loading...</fountain-hello>')($rootScope);
     $rootScope.$digest();
     const h1 = element.find('h1');
-    expect(h1.html()).to.equal('Hello World!');
+    expect(h1.html()).toEqual('Hello World!');
   }));
 });
