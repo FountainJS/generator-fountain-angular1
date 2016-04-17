@@ -17,5 +17,7 @@ angular
   .component('fountainHeader', header)
   .component('fountainTitle', title)
   .component('fountainFooter', footer);
+<% if (modules === 'systemjs') { -%>
 
 angular.bootstrap(document, ['app']);
+<% } -%>
