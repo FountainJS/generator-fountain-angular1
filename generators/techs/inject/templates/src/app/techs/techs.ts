@@ -9,7 +9,7 @@ class Tech {
 
 class TechsController {
   public techs: Tech[];
-
+  /** @ngInject */
   constructor(private $http: angular.IHttpService) {
     $http
       .get('app/techs/techs.json')

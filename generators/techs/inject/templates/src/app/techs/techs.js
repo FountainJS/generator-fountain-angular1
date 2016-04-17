@@ -4,7 +4,7 @@ angular
     templateUrl: 'app/techs/techs.html',
     controller: TechsController
   });
-
+/** @ngInject */
 function TechsController($http) {
   var vm = this;
 
