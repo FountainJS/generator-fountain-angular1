@@ -12,5 +12,7 @@ module.exports = app;
 angular
   .module(app, [])
   .component('app', hello);
+<% if (modules === 'systemjs') { -%>
 
 angular.bootstrap(document, ['app']);
+<% } -%>
