@@ -39,7 +39,7 @@ module.exports = fountain.Base.extend({
           /^src\/(.*\/[^\.]*).*$/,
           `${prefix}$1.html`
         );
-        this.copyTemplate(file, file, {templateUrl});
+        this.copyTemplate(file, file, {templateUrl, modules: this.props.modules});
       });
     },
 

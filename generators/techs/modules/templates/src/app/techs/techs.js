@@ -1,8 +1,15 @@
 module.exports = {
   templateUrl: 'app/techs/techs.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['$http', TechsController]
+};
+
+<% } else { -%>
   controller: TechsController
 };
+
 /** @ngInject */
+<% } -%>
 function TechsController($http) {
   var vm = this;
 

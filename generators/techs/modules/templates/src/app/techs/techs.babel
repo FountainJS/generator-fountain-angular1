@@ -1,8 +1,15 @@
 export const techs = {
   templateUrl: 'app/techs/techs.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['$http', TechsController]
+};
+
+<% } else { -%>
   controller: TechsController
 };
 
+/** @ngInject */
+<% } -%>
 function TechsController($http) {
   $http
     .get('app/techs/techs.json')
