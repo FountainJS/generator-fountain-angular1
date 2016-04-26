@@ -7,9 +7,12 @@ class Tech {
   ) {}
 }
 
+<% if (modules === 'webpack') { -%>
+/** @ngInject */
+<% } -%>
 class TechsController {
   public techs: Tech[];
-  /** @ngInject */
+
   constructor(private $http: angular.IHttpService) {
     $http
       .get('app/techs/techs.json')
@@ -21,5 +24,9 @@ class TechsController {
 
 export const techs = {
   templateUrl: 'app/techs/techs.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['$http', TechsController]
+<% } else { -%>
   controller: TechsController
+<% } -%>
 };

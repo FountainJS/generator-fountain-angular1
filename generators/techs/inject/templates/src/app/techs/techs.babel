@@ -5,6 +5,7 @@ angular
     controller: TechsController
   });
 
+/** @ngInject */
 function TechsController($http) {
   $http
     .get('app/techs/techs.json')
