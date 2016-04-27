@@ -8,10 +8,10 @@ describe('header component', () => {
       };
     });
   }));
-  it('should render \'Foutain Generator\'', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
+  it('should render \'Fountain Generator\'', inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<fountain-header></fountain-header>')($rootScope);
     $rootScope.$digest();
     const header = element.find('a');
-    expect(header.html().trim()).toEqual('Foutain Generator');
+    expect(header.html().trim()).toEqual('Fountain Generator');
   }));
 });

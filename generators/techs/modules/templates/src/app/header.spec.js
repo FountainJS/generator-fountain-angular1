@@ -10,10 +10,10 @@ describe('header component', function () {
     angular.mock.module('fountainHeader');
   });
 
-  it('should render \'Foutain Generator\'', angular.mock.inject(function ($rootScope, $compile) {
+  it('should render \'Fountain Generator\'', angular.mock.inject(function ($rootScope, $compile) {
     var element = $compile('<fountain-header></fountain-header>')($rootScope);
     $rootScope.$digest();
     var header = element.find('a');
-    expect(header.html().trim()).toEqual('Foutain Generator');
+    expect(header.html().trim()).toEqual('Fountain Generator');
   }));
 });
