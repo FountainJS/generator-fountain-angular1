@@ -12,10 +12,10 @@ describe('header component', () => {
     <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>module('fountainHeader');
   });
 
-  it('should render \'Foutain Generator\'', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
+  it('should render \'Fountain Generator\'', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject(($rootScope: ng.IRootScopeService, $compile: ng.ICompileService) => {
     const element = $compile('<fountain-header></fountain-header>')($rootScope);
     $rootScope.$digest();
     const header = element.find('a');
-    expect(header.html().trim()).toEqual('Foutain Generator');
+    expect(header.html().trim()).toEqual('Fountain Generator');
   }));
 });
