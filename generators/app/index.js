@@ -26,7 +26,7 @@ module.exports = fountain.Base.extend({
       }];
 
       this.prompt(prompts, props => {
-        Object.assign(this.props, this.options, props);
+        Object.assign(this.props, props);
         done();
       });
     }
@@ -44,11 +44,18 @@ module.exports = fountain.Base.extend({
     });
   },
 
-  composing() {
-    this.composeWith(`fountain-angular1:${this.props.sample}`, {options: this.props}, {
+  default() {
+    const options = {
+      framework: this.props.framework,
+      modules: this.props.modules,
+      js: this.props.js,
+      css: this.props.css
+    };
+
+    this.composeWith(`fountain-angular1:${this.props.sample}`, {options}, {
       local: require.resolve(`../${this.props.sample}/${this.props.modules === 'inject' ? 'inject' : 'modules'}`)
     });
-    this.composeWith('fountain-gulp', {options: this.props}, {
+    this.composeWith('fountain-gulp', {options}, {
       local: require.resolve('generator-fountain-gulp/generators/app')
     });
   },
