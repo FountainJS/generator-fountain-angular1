@@ -26,7 +26,7 @@ module.exports = fountain.Base.extend({
       }];
 
       this.prompt(prompts, props => {
-        Object.assign(this.props, this.options, props);
+        Object.assign(this.props, this.props, props);
         done();
       });
     }
