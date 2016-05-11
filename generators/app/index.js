@@ -44,7 +44,7 @@ module.exports = fountain.Base.extend({
     });
   },
 
-  composing() {
+  default() {
     const options = {
       framework: this.props.framework,
       modules: this.props.modules,
