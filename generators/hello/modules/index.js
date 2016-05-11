@@ -3,10 +3,6 @@
 const fountain = require('fountain-generator');
 
 module.exports = fountain.Base.extend({
-  prompting() {
-    this.fountainPrompting();
-  },
-
   writing() {
     const files = [
       'src/index.js',
@@ -17,7 +13,7 @@ module.exports = fountain.Base.extend({
     ];
 
     files.forEach(file => {
-      const prefix = this.props.modules === 'systemjs' ? 'src/' : '';
+      const prefix = this.options.modules === 'systemjs' ? 'src/' : '';
       const templateUrl = file.replace(
         /^src\/(.*\/[^\.]*).*$/,
         `${prefix}$1.html`

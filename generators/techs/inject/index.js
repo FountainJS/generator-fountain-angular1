@@ -3,10 +3,6 @@
 const fountain = require('fountain-generator');
 
 module.exports = fountain.Base.extend({
-  prompting() {
-    this.fountainPrompting();
-  },
-
   writing: {
     src() {
       const files = [

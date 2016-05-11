@@ -3,10 +3,6 @@
 const fountain = require('fountain-generator');
 
 module.exports = fountain.Base.extend({
-  prompting() {
-    this.fountainPrompting();
-  },
-
   writing() {
     [
       'src/index.js',
@@ -14,6 +10,6 @@ module.exports = fountain.Base.extend({
       'src/app/hello.js',
       'src/app/hello.spec.js',
       'src/app/hello.html'
-    ].map(file => this.copyTemplate(file, file, {}));
+    ].map(file => this.copyTemplate(file, file));
   }
 });
