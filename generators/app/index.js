@@ -49,7 +49,8 @@ module.exports = fountain.Base.extend({
       framework: this.props.framework,
       modules: this.props.modules,
       js: this.props.js,
-      css: this.props.css
+      css: this.props.css,
+      sample: this.props.sample
     };
 
     this.composeWith(`fountain-angular1:${this.props.sample}`, {options}, {
