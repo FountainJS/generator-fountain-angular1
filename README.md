@@ -1,10 +1,6 @@
 # Fountain Angular 1 Generator
 
-Yeoman 'fountain' generator to start a webapp with Angular 1.
-
-[![Angular 1](docs/assets/angular1.png)](https://github.com/FountainJS/generator-fountain-angular1)
-
-## Project under heavy development
+[![Angular 1](docs/assets/angular1.png)](https://docs.angularjs.org/guide)
 
 > This Yeoman generator allows you to start an Angular1 web app with the best Developer Experience out of the box!
 
@@ -23,7 +19,7 @@ To take profit of the best of the Yeoman infrastructure, we heavily relies on th
 
 Thereby, each needs of your future application will be addressed by a dedicated Yeoman generator (each will be used depending of the options you selected or not).
 
-More informations in [DESIGN.md](https://github.com/FountainJS/generator-fountain-webapp/blob/master/DESIGN.md).
+More informations in [DESIGN.md](http://fountainjs.io/doc/design).
 
 
 ### Web tooling layer
@@ -40,23 +36,22 @@ More informations in [DESIGN.md](https://github.com/FountainJS/generator-fountai
 
 ## Usage
 
-### Requirement Node 4+
-This generator is targeted to be used with Node >= 4.0.0. You can check your version number with the command
+### Requirement Node 4+ && NPM 3+
+This generator is targeted to be used with Node >= 4.0.0 and NPM => 3.0.0. You can check your version number with the command
 ```
-node --version
+node --version && npm --version
 ```
-If you have a version 0.x, please update on [nodejs.org](https://nodejs.org/en/download/).
 
 ### Install
 
-##### Install required tools `yo` and `gulp-cli`:
+##### Install required tools `yo`:
 ```
-npm install -g yo gulp-cli
+npm install -g yo
 ```
 
-##### Install `generator-fountain-webapp`:
+##### Install `generator-fountain-angular1`:
 ```
-npm install -g generator-fountain-webapp
+npm install -g generator-fountain-angular1
 ```
 
 
@@ -64,18 +59,18 @@ npm install -g generator-fountain-webapp
 
 ##### Create a new directory, and go into:
 ```
-mkdir my-new-project && cd $_
+mkdir my-new-project && cd my-new-project
 ```
 
-##### Run `yo fountain-webapp`, and select desired technologies:
+##### Run `yo fountain-angular1`, and select desired technologies:
 ```
-yo fountain-webapp
+yo fountain-angular1
 ```
 
-## Changelog
+### [Start development](http://fountainjs.io/doc/usage/#use-npm-scripts)
 
-[All changes listed in the GitHub releases](https://github.com/FountainJS/generator-fountain-webapp)
 
-## Contributing
+## [Changelog](https://github.com/FountainJS/generator-fountain-angular1/releases)
 
-[Guidelines](CONTRIBUTING.md)
+
+## [Contributing](http://fountainjs.io/doc/contributing)
