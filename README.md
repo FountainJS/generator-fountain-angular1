@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="http://fountainjs.io/">
+    <img alt="FountainJS" src="http://fountainjs.io/assets/imgs/fountain.png" width="200">
+  </a>
+</p>
+
 # Fountain Angular 1 Generator
 
 [![Angular 1](http://fountainjs.io/assets/imgs/angular1.png)](https://docs.angularjs.org/guide)
