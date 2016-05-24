@@ -1,6 +1,6 @@
 # Fountain Angular 1 Generator
 
-[![Angular 1](docs/assets/angular1.png)](https://docs.angularjs.org/guide)
+[![Angular 1](http://fountainjs.io/assets/imgs/angular1.png)](https://docs.angularjs.org/guide)
 
 > This Yeoman generator allows you to start an Angular1 web app with the best Developer Experience out of the box!
 
@@ -23,15 +23,15 @@ More informations in [DESIGN.md](http://fountainjs.io/doc/design).
 
 
 ### Web tooling layer
-[![Gulp](docs/assets/gulp.png)](https://github.com/FountainJS/generator-fountain-gulp)
-[![ESLint](docs/assets/eslint.png)](https://github.com/FountainJS/generator-fountain-eslint)
-[![BrowserSync](docs/assets/browsersync.png)](https://github.com/FountainJS/generator-fountain-browsersync)
-[![Karma](docs/assets/karma.png)](https://github.com/FountainJS/generator-fountain-karma)
+[![Gulp](http://fountainjs.io/assets/imgs/gulp.png)](https://github.com/FountainJS/generator-fountain-gulp)
+[![ESLint](http://fountainjs.io/assets/imgs/eslint.png)](https://github.com/FountainJS/generator-fountain-eslint)
+[![BrowserSync](http://fountainjs.io/assets/imgs/browsersync.png)](https://github.com/FountainJS/generator-fountain-browsersync)
+[![Karma](http://fountainjs.io/assets/imgs/karma.png)](https://github.com/FountainJS/generator-fountain-karma)
 
 ### Module management layer
-[![Webpack](docs/assets/webpack.png)](https://github.com/FountainJS/generator-fountain-webpack)
-[![SystemJS](docs/assets/systemjs.png)](https://github.com/FountainJS/generator-fountain-systemjs)
-[![Bower](docs/assets/bower.png)](https://github.com/FountainJS/generator-fountain-inject)
+[![Webpack](http://fountainjs.io/assets/imgs/webpack.png)](https://github.com/FountainJS/generator-fountain-webpack)
+[![SystemJS](http://fountainjs.io/assets/imgs/systemjs.png)](https://github.com/FountainJS/generator-fountain-systemjs)
+[![Bower](http://fountainjs.io/assets/imgs/bower.png)](https://github.com/FountainJS/generator-fountain-inject)
 
 
 ## Usage
