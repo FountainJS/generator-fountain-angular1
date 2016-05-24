@@ -2,21 +2,21 @@ var techsJson = [
   {
     key: 'gulp',
     title: 'Gulp',
-    logo: 'https://raw.githubusercontent.com/FountainJS/generator-fountain-webapp/master/docs/assets/gulp.png',
+    logo: 'http://fountainjs.io/assets/imgs/gulp.png',
     text1: 'The streaming build system',
     text2: 'Automate and enhance your workflow'
   },
   {
     key: 'react',
     title: 'React',
-    logo: 'https://raw.githubusercontent.com/FountainJS/generator-fountain-webapp/master/docs/assets/react.png',
+    logo: 'http://fountainjs.io/assets/imgs/react.png',
     text1: 'A JavaScript library for building user interfaces',
     text2: 'A declarative, efficient, and flexible JavaScript library for building user interfaces'
   },
   {
     key: 'angular1',
     title: 'Angular 1',
-    logo: 'https://raw.githubusercontent.com/FountainJS/generator-fountain-webapp/master/docs/assets/angular1.png',
+    logo: 'http://fountainjs.io/assets/imgs/angular1.png',
     text1: 'HTML enhanced for web apps!',
     text2: 'AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.'
   }
