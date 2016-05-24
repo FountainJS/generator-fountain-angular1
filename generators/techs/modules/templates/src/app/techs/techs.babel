@@ -12,7 +12,7 @@ class TechsController {
 export const techs = {
   templateUrl: 'app/techs/techs.html',
 <% if (modules === 'systemjs') { -%>
-  controller: ['$http', TechsController]
+  controller: TechsController
 };
 <% } else { -%>
   controller: TechsController
