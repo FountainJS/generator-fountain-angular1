@@ -11,10 +11,5 @@ class TechsController {
 
 export const techs = {
   templateUrl: 'app/techs/techs.html',
-<% if (modules === 'systemjs') { -%>
   controller: TechsController
 };
-<% } else { -%>
-  controller: TechsController
-};
-<% } -%>
