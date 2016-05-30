@@ -1,4 +1,4 @@
-/// <reference path="../../typings/main.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 describe('hello component', () => {
   beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
