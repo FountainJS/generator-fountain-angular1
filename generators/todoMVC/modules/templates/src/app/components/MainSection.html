@@ -1,0 +1,24 @@
+<section class="main">
+  <input ng-if="$ctrl.todos.length"
+    class="toggle-all"
+    type="checkbox"
+    ng-checked="$ctrl.todos.reduce($ctrl.completeReducer, 0) === $ctrl.todos.length"
+    ng-click="$ctrl.handleCompleteAll()"
+    />
+  <ul class="todo-list">
+    <todo-item
+      ng-repeat="todo in $ctrl.todos.filter($ctrl.selectedFilter.filter)"
+      todo="todo"
+      on-destroy="$ctrl.handleDestroy(id)"
+      on-change="$ctrl.handleChange(id)"
+      on-save="$ctrl.handleSave(todo)"
+    ></todo-item>
+  </ul>
+  <footer-component ng-if="$ctrl.todos.length"
+    completed-count="$ctrl.todos.reduce($ctrl.completeReducer, 0)"
+    active-count="$ctrl.todos.length - $ctr.todos.reduce($ctrl.completeReducer, 0)"
+    filter="$ctrl.selectedFilter"
+    on-clear-completed="$ctrl.handleClearCompleted()"
+    on-show="$ctrl.handleShow(filter)"
+  ></footer-component>
+</section>
