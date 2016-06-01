@@ -19,7 +19,8 @@ module.exports = fountain.Base.extend({
         message: 'Do you want a sample app?',
         choices: [
           {name: 'A working landing page', value: 'techs'},
-          {name: 'Just a Hello World', value: 'hello'}
+          {name: 'Just a Hello World', value: 'hello'},
+          {name: 'TodoMVC', value: 'todoMVC'}
         ]
       }];
 

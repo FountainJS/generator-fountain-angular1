@@ -7,12 +7,13 @@ class Tech {
   ) {}
 }
 
-<% if (modules === 'webpack') { -%>
-/** @ngInject */
-<% } -%>
+
 class TechsController {
   public techs: Tech[];
 
+<% if (modules === 'webpack') { -%>
+  /** @ngInject */
+<% } -%>
   constructor(private $http: angular.IHttpService) {
     $http
       .get('app/techs/techs.json')
