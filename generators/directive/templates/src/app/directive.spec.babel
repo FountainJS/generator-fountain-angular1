@@ -1,0 +1,7 @@
+<% if (modules !== 'inject') { -%>
+<% include modules/directive.spec.header.babel %>
+<% } -%>
+describe('<%- directiveName %> directive', () => {
+  it('should...', angular.mock.inject(($rootScope, $compile) => {
+  }));
+});

@@ -6,7 +6,7 @@ describe('footer component', () => {
       };
     });
   }));
-  beforeEach(angular.mock.module('app'));
+
   it('should render \'FountainJS team\'', angular.mock.inject(($rootScope, $compile) => {
     const element = $compile('<fountain-footer></fountain-footer>')($rootScope);
     $rootScope.$digest();

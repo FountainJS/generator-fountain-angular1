@@ -1,0 +1,15 @@
+<% if (modules !== 'inject') { -%>
+<% include modules/component.spec.header.babel %>
+<% } -%>
+describe('<%- componentName %> component', () => {
+<% if (modules === 'inject') { -%>
+<% include inject/component.spec.babel %>
+<% } else { -%>
+<% include modules/component.spec.babel %>
+<% } -%>
+  it('should...', angular.mock.inject(($rootScope, $compile) => {
+    const element = $compile('<<%- componentName %>></<%- componentName %>>')($rootScope);
+    $rootScope.$digest();
+    expect(element).not.toBeNull();
+  }));
+});

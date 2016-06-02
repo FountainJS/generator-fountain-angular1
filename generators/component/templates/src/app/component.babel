@@ -1,0 +1,11 @@
+class <%- className %>Controller {
+  constructor() {
+    this.text = 'My brand new component!';
+  }
+}
+
+<% if (modules === 'inject') { -%>
+<% include inject/component.babel %>
+<% } else { -%>
+<% include modules/component.babel %>
+<% } -%>

@@ -1,0 +1,19 @@
+/// <reference path="<%- typings %>" />
+
+<% if (modules !== 'inject') { -%>
+<% include modules/service.spec.header.ts %>
+<% } -%>
+describe('<%- serviceName %> service', () => {
+<% if (modules === 'inject') { -%>
+<% include inject/service.spec.ts %>
+<% } else { -%>
+<% include modules/service.spec.ts %>
+<% } -%>
+  it('should', <%- modules === 'webpack' ? 'angular.mock.' : '' %>inject((<%- serviceName %>: <%- serviceName %>, $httpBackend: ng.IHttpBackendService) => {
+    $httpBackend.whenGET('api/data/').respond([{text: 'Hello'}]);
+    <%- serviceName %>.getData().then(response => {
+      expect(response.data.length).toEqual(1);
+    });
+    $httpBackend.flush();
+  }));
+});

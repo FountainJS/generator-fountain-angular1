@@ -1,0 +1,13 @@
+<% if (modules !== 'inject') { -%>
+<% include modules/filter.spec.header.babel %>
+<% } -%>
+describe('<%- filterName %> filter', () => {
+<% if (modules === 'inject') { -%>
+<% include inject/filter.spec.babel %>
+<% } else { -%>
+<% include modules/filter.spec.babel %>
+<% } -%>
+  it('should...', angular.mock.inject(<%- filterName %>Filter => {
+    expect(<%- filterName %>Filter('Hello')).toBe(0);
+  }));
+});

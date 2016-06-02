@@ -1,0 +1,17 @@
+<% if (modules !== 'inject') { -%>
+<% include modules/service.spec.header.babel %>
+<% } -%>
+describe('<%- serviceName %> service', () => {
+<% if (modules === 'inject') { -%>
+<% include inject/service.spec.babel %>
+<% } else { -%>
+<% include modules/service.spec.babel %>
+<% } -%>
+  it('should', angular.mock.inject((<%- serviceName %>, $httpBackend) => {
+    $httpBackend.whenGET('api/data/').respond([{text: 'Hello'}]);
+    <%- serviceName %>.getData().then(response => {
+      expect(response.data.length).toEqual(1);
+    });
+    $httpBackend.flush();
+  }));
+});
