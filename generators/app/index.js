@@ -32,7 +32,7 @@ module.exports = fountain.Base.extend({
 
   configuring() {
     this.config.set('version', version);
-    this.config.set('options', this.props);
+    this.config.set('props', this.props);
     this.mergeJson('package.json', {
       dependencies: {
         angular: '^1.5.0'
