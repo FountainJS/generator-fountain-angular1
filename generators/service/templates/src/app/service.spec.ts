@@ -9,11 +9,7 @@ describe('<%- serviceName %> service', () => {
 <% } else { -%>
 <% include modules/service.spec.ts %>
 <% } -%>
-  it('should', <%- modules === 'webpack' ? 'angular.mock.' : '' %>inject((<%- serviceName %>: <%- serviceName %>, $httpBackend: ng.IHttpBackendService) => {
-    $httpBackend.whenGET('api/data/').respond([{text: 'Hello'}]);
-    <%- serviceName %>.getData().then(response => {
-      expect(response.data.length).toEqual(1);
-    });
-    $httpBackend.flush();
+  it('should', <%- modules === 'webpack' ? 'angular.mock.' : '' %>inject((<%- serviceName %>: <%- serviceName %>) => {
+    expect(<%- serviceName %>.getData()).toEqual(3);
   }));
 });

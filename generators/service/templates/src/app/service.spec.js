@@ -7,11 +7,7 @@ describe('<%- serviceName %> service', function () {
 <% } else { -%>
 <% include modules/service.spec.js %>
 <% } -%>
-  it('should', angular.mock.inject(function (<%- serviceName %>, $httpBackend) {
-    $httpBackend.whenGET('api/data/').respond([{text: 'Hello'}]);
-    <%- serviceName %>.getData().then(function (response) {
-      expect(response.data.length).toEqual(1);
-    });
-    $httpBackend.flush();
+  it('should', angular.mock.inject(function (<%- serviceName %>) {
+    expect(<%- serviceName %>.getData()).toEqual(3);
   }));
 });
