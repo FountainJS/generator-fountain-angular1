@@ -1,12 +1,6 @@
 class <%- serviceName %> {
-<% if (modules === 'webpack') { -%>
-<% include modules/service.ngInject.ts %>
-<% } -%>
-  constructor(private $http: angular.IHttpService) {
-  }
-
   getData() {
-    return this.$http.get('api/data/');
+    return 1 + 2;
   }
 }
 

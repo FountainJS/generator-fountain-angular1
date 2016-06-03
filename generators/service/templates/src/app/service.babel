@@ -1,13 +1,6 @@
 class <%- serviceName %> {
-<% if (modules === 'webpack') { -%>
-<% include modules/service.ngInject.babel %>
-<% } -%>
-  constructor($http) {
-    this.$http = $http;
-  }
-
   getData() {
-    return this.$http.get('api/data/');
+    return 1 + 2;
   }
 }
 
