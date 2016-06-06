@@ -1,0 +1,14 @@
+<% if (modules === 'inject') { -%>
+<% include inject/routes.babel %>
+<% } else { -%>
+<% include modules/routes.babel %>
+<% } -%>
+function routesConfig($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      template: '<home></home>'
+    });
+}

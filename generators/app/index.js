@@ -43,6 +43,19 @@ module.exports = fountain.Base.extend({
         'gulp-angular-templatecache': '^1.8.0'
       }
     });
+    if (this.props.router === 'router') {
+      this.mergeJson('package.json', {
+        dependencies: {
+          '@angular/router': '2.0.0-rc.1'
+        }
+      });
+    } else if (this.props.router === 'uirouter') {
+      this.mergeJson('package.json', {
+        dependencies: {
+          'angular-ui-router': '^0.3.1'
+        }
+      });
+    }
   },
 
   default() {
@@ -51,6 +64,7 @@ module.exports = fountain.Base.extend({
       modules: this.props.modules,
       js: this.props.js,
       css: this.props.css,
+      router: this.props.router,
       sample: this.props.sample
     };
 
@@ -63,6 +77,9 @@ module.exports = fountain.Base.extend({
   },
 
   writing() {
+    if (this.props.router === 'uirouter') {
+      this.copyTemplate('src/router/routes.js', 'src/routes.js', this.props);
+    }
     this.copyTemplate('src/index.html', 'src/index.html');
   }
 });
