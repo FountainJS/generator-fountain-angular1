@@ -8,11 +8,20 @@ var MainSection = require('./app/components/MainSection');
 var TodoTextInput = require('./app/components/TodoTextInput');
 var TodoItem = require('./app/components/TodoItem');
 var Footer = require('./app/components/Footer');
+<% if (router === 'uirouter') { -%>
+require('angular-ui-router');
+var routesConfig = require('./routes');
+<% } -%>
 
 import './index.<%- css %>';
 
 angular
+<% if (router === 'uirouter') { -%>
+  .module('app', ['ui.router'])
+  .config(routesConfig)
+<% } else { -%>
   .module('app', [])
+<% } -%>
   .service('todoService', todos.TodoService)
   .component('app', App)
   .component('headerComponent', Header)
