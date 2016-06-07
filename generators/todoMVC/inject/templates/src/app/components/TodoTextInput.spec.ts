@@ -79,30 +79,6 @@ describe('TodoTextInput component', () => {
     expect(component.onSave).not.toHaveBeenCalled();
   }));
 
-  it('should not call onSave with empty text', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject($componentController => {
-    const bindings = {
-      onSave: () => {return; },
-      newTodo: false,
-      text: ''
-    };
-    const component = $componentController('todoTextInput', {}, bindings);
-    spyOn(component, 'onSave').and.callThrough();
-    component.handleBlur();
-    expect(component.onSave).not.toHaveBeenCalled();
-  }));
-
-  it('should not call onSave with empty text', <%- modules !== 'systemjs' ? 'angular.mock.' : '' %>inject($componentController => {
-    const bindings = {
-      onSave: () => {return; },
-      newTodo: true,
-      text: ''
-    };
-    const component = $componentController('todoTextInput', {}, bindings);
-    spyOn(component, 'onSave').and.callThrough();
-    component.handleSubmit({keyCode: 13});
-    expect(component.onSave).not.toHaveBeenCalled();
-  }));
-
   it('should call onSave and clear text', angular.mock.inject($componentController => {
     const bindings = {
       onSave: () => {return; },

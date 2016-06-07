@@ -30,13 +30,13 @@ function TodoTextInput(todoService, $window, $timeout) {
 
 TodoTextInput.prototype = {
   handleBlur: function () {
-    if (!this.newTodo && this.text.length) {
+    if (!this.newTodo) {
       this.onSave({text: this.text});
     }
   },
 
   handleSubmit: function (e) {
-    if (e.keyCode === 13 && this.text.length) {
+    if (e.keyCode === 13) {
       this.onSave({text: this.text});
       if (this.newTodo) {
         this.text = '';
