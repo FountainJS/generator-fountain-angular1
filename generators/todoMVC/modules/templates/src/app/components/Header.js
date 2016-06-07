@@ -17,6 +17,8 @@ function Header(todoService) {
 
 Header.prototype = {
   handleSave: function (text) {
-    this.todos = this.todoService.addTodo(text, this.todos);
+    if (text.length !== 0) {
+      this.todos = this.todoService.addTodo(text, this.todos);
+    }
   }
 };

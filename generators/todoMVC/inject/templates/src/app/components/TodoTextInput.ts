@@ -14,13 +14,13 @@ class TodoTextInput {
   }
 
   handleBlur() {
-    if (!this.newTodo && this.text.length) {
+    if (!this.newTodo) {
       this.onSave({text: this.text});
     }
   }
 
   handleSubmit(e: any) {
-    if (e.keyCode === 13 && this.text.length) {
+    if (e.keyCode === 13) {
       this.onSave({text: this.text});
       if (this.newTodo) {
         this.text = '';
