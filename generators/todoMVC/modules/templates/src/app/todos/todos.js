@@ -1,7 +1,7 @@
 require('es6-shim');
 
 var initialTodo = {
-  text: 'Use ngrx/store',
+  text: 'Use AngularJS',
   completed: false,
   id: 0
 };
