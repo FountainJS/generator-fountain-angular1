@@ -11,7 +11,7 @@ import {TodoTextInput} from './app/components/TodoTextInput';
 import {TodoItem} from './app/components/TodoItem';
 import {Footer} from './app/components/Footer';
 
-import './index.css';
+import './index.<%- css %>';
 
 angular
   .module('app', [])

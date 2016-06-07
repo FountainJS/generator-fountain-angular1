@@ -9,7 +9,7 @@ var TodoTextInput = require('./app/components/TodoTextInput');
 var TodoItem = require('./app/components/TodoItem');
 var Footer = require('./app/components/Footer');
 
-import './index.css';
+import './index.<%- css %>';
 
 angular
   .module('app', [])
