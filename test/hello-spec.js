@@ -13,7 +13,8 @@ describe('generator fountain gulp partials', () => {
     const getFile = () => this.context.copyTemplate['src/app/hello.spec.js'];
     TestUtils.call(this.context, 'writing', {
       framework: 'angular1',
-      css: 'scss'
+      css: 'scss',
+      router: 'none'
     });
     expect(getFile()).to.match(/angular\.mock\.module\('fountainHello/);
     expect(getFile()).to.match(/angular\.mock\.inject\(function/);
@@ -21,7 +22,8 @@ describe('generator fountain gulp partials', () => {
       modules: 'systemjs',
       js: 'typescript',
       framework: 'angular1',
-      css: 'scss'
+      css: 'scss',
+      router: 'none'
     });
     expect(getFile()).not.to.match(/angular\.mock\.module\('fountainHello/);
     expect(getFile()).not.to.match(/angular\.mock\.inject\(function/);

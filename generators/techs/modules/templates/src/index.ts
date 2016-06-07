@@ -16,7 +16,6 @@ import {footer} from './app/footer';
 import './index.<%- css %>';
 
 angular
-  .module('app', [techsModule])
 <% if (router === 'uirouter') { -%>
   .module('app', [techsModule, 'ui.router'])
   .config(routesConfig)
