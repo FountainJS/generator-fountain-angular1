@@ -1,5 +1,5 @@
 var initialTodo = {
-  text: 'Use ngrx/store',
+  text: 'Use AngularJS',
   completed: false,
   id: 0
 };

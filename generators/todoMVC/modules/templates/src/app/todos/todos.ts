@@ -7,7 +7,7 @@ export class Todo {
 }
 
 export const initialTodo: Todo = {
-  text: 'Use ngrx/store',
+  text: 'Use AngularJS',
   completed: false,
   id: 0
 };
