@@ -6,7 +6,9 @@ class Header {
   }
 
   handleSave(text: string) {
-    this.todos = this.todoService.addTodo(text, this.todos);
+    if (text.length !== 0) {
+      this.todos = this.todoService.addTodo(text, this.todos);
+    }
   }
 }
 
