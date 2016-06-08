@@ -15,7 +15,7 @@
 > We use [Gulp 4](http://gulpjs.com/) as a task manager but we'll ask you questions about:
 - Modules management: Webpack, SystemJS, none
 - JS preprocessor: Babel, TypeScript, none
-- CSS preprocessor: Sass, Less, none
+- CSS preprocessor: Sass, Stylus, Less, none
 
 This generator is a sub-generator of the the Yeoman Fountain generator for webapps [generator-fountain-webapp](https://github.com/FountainJS/generator-fountain-webapp).
 
