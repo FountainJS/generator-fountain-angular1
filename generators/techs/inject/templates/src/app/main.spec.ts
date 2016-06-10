@@ -1,22 +1,22 @@
 /// <reference path="../../typings/index.d.ts" />
 
 describe('main component', () => {
-  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+  beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainHeaderDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+  beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainTitleDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+  beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainTechsDirective', () => {
       return {};
     });
   }));
-  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+  beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainFooterDirective', () => {
       return {};
     });
