@@ -1,7 +1,7 @@
 /// <reference path="../../../typings/index.d.ts" />
 
 describe('tech component', () => {
-  beforeEach(module('app', ($provide: ng.auto.IProvideService) => {
+  beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainTech', () => {
       return {
         templateUrl: 'app/techs/tech.html'
