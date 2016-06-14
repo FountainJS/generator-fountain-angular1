@@ -23,6 +23,16 @@ module.exports = fountain.Base.extend({
           {name: 'Just a Hello World', value: 'hello'},
           {name: 'TodoMVC', value: 'todoMVC'}
         ]
+      }, {
+        when: !this.options.router,
+        type: 'list',
+        name: 'router',
+        message: 'Would you like a router?',
+        choices: [
+          // {name: 'Angular Component Router (Angular 2 router)', value: 'router'},
+          {name: 'Angular UI Router', value: 'uirouter'},
+          {name: 'None', value: 'none'}
+        ]
       }];
 
       return this.prompt(prompts).then(props => {
@@ -43,14 +53,28 @@ module.exports = fountain.Base.extend({
         'gulp-angular-templatecache': '^1.8.0'
       }
     });
+    if (this.props.router === 'router') {
+      this.mergeJson('package.json', {
+        dependencies: {
+          '@angular/router': '2.0.0-rc.1'
+        }
+      });
+    } else if (this.props.router === 'uirouter') {
+      this.mergeJson('package.json', {
+        dependencies: {
+          'angular-ui-router': '^0.3.1'
+        }
+      });
+    }
   },
 
-  default() {
+  composing() {
     const options = {
       framework: this.props.framework,
       modules: this.props.modules,
       js: this.props.js,
       css: this.props.css,
+      router: this.props.router,
       sample: this.props.sample
     };
 
@@ -63,6 +87,9 @@ module.exports = fountain.Base.extend({
   },
 
   writing() {
-    this.copyTemplate('src/index.html', 'src/index.html');
+    if (this.props.router === 'uirouter') {
+      this.copyTemplate('src/routes.js', 'src/routes.js', this.props);
+    }
+    this.copyTemplate('src/index.html', 'src/index.html', {router: this.props.router});
   }
 });

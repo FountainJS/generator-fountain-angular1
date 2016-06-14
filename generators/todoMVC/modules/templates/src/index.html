@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
   <head>
+<% if (router === 'uirouter') { -%>
+    <base href="/">
+<% } -%>
     <meta charset="utf-8">
     <title>FountainJS</title>
     <meta name="description" content="">
@@ -9,7 +12,11 @@
 
   <body ng-app="app">
     <div class="todoapp">
+<% if (router === 'uirouter') { -%>
+      <ui-view></ui-view>
+<% } else { -%>
       <app>Loading...</app>
+<% } -%>
     </div>
   </body>
 </html>
