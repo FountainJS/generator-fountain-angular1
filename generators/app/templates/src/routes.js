@@ -1,4 +1,8 @@
-<% if (modules !== 'inject') { -%>
+<% if (modules === 'inject') { -%>
+angular
+  .module('app')
+  .config(routesConfig);
+<% } else { -%>
 module.exports = routesConfig;
 <% } -%>
 
