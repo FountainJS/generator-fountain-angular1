@@ -30,7 +30,7 @@ module.exports = fountain.Base.extend({
         message: 'Would you like a router?',
         choices: [
           // {name: 'Angular Component Router (Angular 2 router)', value: 'router'},
-          {name: 'Angular UI router', value: 'uirouter'},
+          {name: 'Angular UI Router', value: 'uirouter'},
           {name: 'None', value: 'none'}
         ]
       }];
