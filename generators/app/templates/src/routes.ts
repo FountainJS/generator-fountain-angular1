@@ -1,6 +1,10 @@
 /// <reference path="../typings/index.d.ts" />
 
-<% if (modules !== 'inject') { -%>
+<% if (modules === 'inject') { -%>
+angular
+  .module('app')
+  .config(routesConfig);
+<% } else { -%>
 export default routesConfig;
 <% } -%>
 
