@@ -1,6 +1,6 @@
 {
   "name": "generator-fountain-angular1",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Yeoman 'fountain' generator to start a webapp with Angular 1",
   "homepage": "",
   "repository": "fountainjs/generator-fountain-angular1",
@@ -22,8 +22,8 @@
     "angular"
   ],
   "dependencies": {
-    "fountain-generator": "^0.5.3",
-    "generator-fountain-gulp": "^0.5.3"
+    "fountain-generator": "^0.5.4",
+    "generator-fountain-gulp": "^0.5.4"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.2",
