@@ -1,6 +1,6 @@
 angular
 <% if (router === 'uirouter') { -%>
-  .module('app', ['ui.router']);
+  .module('app', ['ui.router'])
 <% } else { -%>
   .module('app', [])
 <% } -%>
