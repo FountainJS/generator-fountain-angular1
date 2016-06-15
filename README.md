@@ -73,6 +73,19 @@ mkdir my-new-project && cd my-new-project
 yo fountain-angular1
 ```
 
+### Sub-generators
+
+Few sub-generators are available. You can see the full list by running `yo --generators`.  
+Each generator has 2 options:
+- You can set the name of the generated item with `--name`
+- You can set the path of the generated item with `--dir`
+
+**Example:**
+
+```
+yo fountain-angular1:component --name myComponent --dir components/game
+```
+
 ### [Start development](http://fountainjs.io/doc/usage/#use-npm-scripts)
 
 
