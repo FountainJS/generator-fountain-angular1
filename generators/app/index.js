@@ -53,13 +53,7 @@ module.exports = fountain.Base.extend({
         'gulp-angular-templatecache': '^1.8.0'
       }
     });
-    if (this.props.router === 'router') {
-      this.mergeJson('package.json', {
-        dependencies: {
-          '@angular/router': '2.0.0-rc.1'
-        }
-      });
-    } else if (this.props.router === 'uirouter') {
+    if (this.props.router === 'uirouter') {
       this.mergeJson('package.json', {
         dependencies: {
           'angular-ui-router': '^0.3.1'
