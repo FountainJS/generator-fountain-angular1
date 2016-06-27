@@ -9,11 +9,6 @@ module.exports = fountain.Base.extend({
         'todomvc-app-css': '^2.0.4'
       }
     });
-    if (this.options.js === 'js') {
-      this.mergeJson('package.json', {
-        dependencies: {'object-assign': '^4.1.0'}
-      });
-    }
   },
 
   writing: {
