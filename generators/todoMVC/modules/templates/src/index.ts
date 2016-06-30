@@ -20,7 +20,11 @@ import './index.<%- css %>';
 angular
 <% if (router === 'uirouter') { -%>
   .module('app', ['ui.router'])
+<% if (modules === 'systemjs') { -%>
+  .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', routesConfig])
+<% } else { -%>
   .config(routesConfig)
+<% } -%>
 <% } else { -%>
   .module('app', [])
 <% } -%>
