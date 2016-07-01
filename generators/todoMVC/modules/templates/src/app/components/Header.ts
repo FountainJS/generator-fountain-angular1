@@ -3,7 +3,9 @@ import {TodoService, Todo} from '../todos/todos';
 class HeaderController {
   todos: Todo[];
 
+<% if (modules === 'webpack') { -%>
   /** @ngInject */
+<% } -%>
   constructor(public todoService: TodoService) {
   }
 
@@ -16,7 +18,11 @@ class HeaderController {
 
 export const Header = {
   templateUrl: 'app/components/Header.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['todoService', HeaderController],
+<% } else { -%>
   controller: HeaderController,
+<% } -%>
   bindings: {
     todos: '='
   }
