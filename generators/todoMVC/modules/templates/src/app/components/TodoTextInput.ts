@@ -6,7 +6,9 @@ class TodoTextInputController {
   newTodo: boolean;
   onSave: Function;
 
+<% if (modules === 'webpack') { -%>
   /** @ngInject */
+<% } -%>
   constructor(public todoService: TodoService, public $window: any, public $timeout: any) {
     this.editing = this.editing || false;
     this.text = this.text || '';
@@ -42,7 +44,11 @@ class TodoTextInputController {
 
 export const TodoTextInput = {
   templateUrl: 'app/components/TodoTextInput.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['todoService', '$window', '$timeout', TodoTextInputController],
+<% } else { -%>
   controller: TodoTextInputController,
+<% } -%>
   bindings: {
     onSave: '&',
     placeholder: '@',

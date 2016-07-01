@@ -7,7 +7,9 @@ class MainSectionController {
   completeReducer: Function;
   todos: any[];
 
+<% if (modules === 'webpack') { -%>
   /** @ngInject */
+<% } -%>
   constructor(public todoService: TodoService) {
     this.selectedFilter = visibilityFilters[this.filter];
     this.completeReducer = (count: number, todo: Todo): number => todo.completed ? count + 1 : count;
@@ -45,7 +47,11 @@ class MainSectionController {
 
 export const MainSection = {
   templateUrl: 'app/components/MainSection.html',
+<% if (modules === 'systemjs') { -%>
+  controller: ['todoService', MainSectionController],
+<% } else { -%>
   controller: MainSectionController,
+<% } -%>
   bindings: {
     todos: '=',
     filter: '<'
