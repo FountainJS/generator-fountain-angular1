@@ -16,6 +16,6 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
   $stateProvider
     .state('app', {
       url: '/',
-      template: '<app></app>'
+      component: 'app'
     });
 }
