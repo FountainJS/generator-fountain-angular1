@@ -56,7 +56,7 @@ module.exports = fountain.Base.extend({
     if (this.props.router === 'uirouter') {
       this.mergeJson('package.json', {
         dependencies: {
-          'angular-ui-router': '^0.3.1'
+          'angular-ui-router': '1.0.0-beta.1'
         }
       });
     }
