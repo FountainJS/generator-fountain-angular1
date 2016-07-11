@@ -23,7 +23,7 @@ class TechsController {
   }
 }
 
-export const techs = {
+export const techs: angular.IComponentOptions = {
   templateUrl: 'app/techs/techs.html',
 <% if (modules === 'systemjs') { -%>
   controller: ['$http', TechsController]

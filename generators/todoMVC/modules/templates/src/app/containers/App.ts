@@ -11,7 +11,7 @@ class AppController {
   }
 }
 
-export const App = {
+export const App: angular.IComponentOptions = {
   templateUrl: 'app/containers/App.html',
   controller: AppController
 };

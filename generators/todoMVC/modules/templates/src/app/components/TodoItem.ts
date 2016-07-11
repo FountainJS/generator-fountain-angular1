@@ -23,7 +23,7 @@ class TodoItemController {
   }
 }
 
-export const TodoItem = {
+export const TodoItem: angular.IComponentOptions = {
   templateUrl: 'app/components/TodoItem.html',
   controller: TodoItemController,
   bindings: {

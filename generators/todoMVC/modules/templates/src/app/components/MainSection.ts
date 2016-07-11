@@ -45,7 +45,7 @@ class MainSectionController {
   }
 }
 
-export const MainSection = {
+export const MainSection: angular.IComponentOptions = {
   templateUrl: 'app/components/MainSection.html',
 <% if (modules === 'systemjs') { -%>
   controller: ['todoService', MainSectionController],

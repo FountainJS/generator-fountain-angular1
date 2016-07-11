@@ -1,3 +1,3 @@
-export const header = {
+export const header: angular.IComponentOptions = {
   templateUrl: 'app/header.html'
 };
