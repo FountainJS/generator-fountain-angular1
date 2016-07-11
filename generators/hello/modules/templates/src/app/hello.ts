@@ -1,3 +1,3 @@
-export const hello = {
+export const hello: angular.IComponentOptions = {
   templateUrl: '<%- templateUrl %>'
 };

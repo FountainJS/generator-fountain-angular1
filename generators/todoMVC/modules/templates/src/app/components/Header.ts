@@ -16,7 +16,7 @@ class HeaderController {
   }
 }
 
-export const Header = {
+export const Header: angular.IComponentOptions = {
   templateUrl: 'app/components/Header.html',
 <% if (modules === 'systemjs') { -%>
   controller: ['todoService', HeaderController],

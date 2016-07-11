@@ -24,7 +24,7 @@ class FooterController {
   }
 }
 
-export const Footer = {
+export const Footer: angular.IComponentOptions = {
   templateUrl: 'app/components/Footer.html',
   controller: FooterController,
   bindings: {
