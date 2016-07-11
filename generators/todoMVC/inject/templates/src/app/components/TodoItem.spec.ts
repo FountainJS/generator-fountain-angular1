@@ -1,7 +1,7 @@
 /// <reference path="../../../typings/index.d.ts" />
 
 describe('TodoItem component', () => {
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('todoItem', () => {
       return {
         templateUrl: 'app/components/TodoItem.html'

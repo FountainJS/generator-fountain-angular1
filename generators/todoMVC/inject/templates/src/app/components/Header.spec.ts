@@ -21,13 +21,13 @@ describe('Header component', () => {
     }
   }
 
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('todoService', () => {
       return new MockTodoService();
     });
   }));
 
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('headerComponent', () => {
       return {
         templateUrl: 'app/components/Header.html'
