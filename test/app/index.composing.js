@@ -23,7 +23,9 @@ test(`Call this.composeWith twice when modules is 'webpack'`, () => {
     js: context.props.js,
     css: context.props.css,
     router: context.props.router,
-    sample: context.props.sample
+    sample: context.props.sample,
+    skipInstall: context.props.skipInstall,
+    skipCache: context.props.skipCache
   };
   expect(spy).to.have.been.called.twice();
   expect(spy).to.have.been.called.with(`fountain-angular1:techs`, {options}, {local: require.resolve('../../generators/techs/modules')});
@@ -40,7 +42,9 @@ test(`Call this.composeWith twice when modules is 'inject'`, () => {
     js: context.props.js,
     css: context.props.css,
     router: context.props.router,
-    sample: context.props.sample
+    sample: context.props.sample,
+    skipInstall: context.props.skipInstall,
+    skipCache: context.props.skipCache
   };
   expect(spy).to.have.been.called.twice();
   expect(spy).to.have.been.called.with(`fountain-angular1:techs`, {options}, {local: require.resolve('../../generators/techs/inject')});
