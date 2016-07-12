@@ -4,7 +4,7 @@ describe('TodoTextInput component', () => {
   class MockTodoService {
   }
 
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('todoTextInput', () => {
       return {
         templateUrl: 'app/components/TodoTextInput.html'

@@ -12,7 +12,7 @@ describe('MainSection component', () => {
 
   let component;
 
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('mainSection', () => {
       return {
         templateUrl: 'app/components/MainSection.html'
@@ -20,7 +20,7 @@ describe('MainSection component', () => {
     });
   }));
 
-  beforeEach(module('app', $provide => {
+  beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('todoService', () => {
       return new MockTodoService();
     });
