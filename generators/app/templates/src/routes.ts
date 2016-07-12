@@ -8,18 +8,8 @@ angular
 export default routesConfig;
 <% } -%>
 
-interface IComponentState extends angular.ui.IState {
-  component?: string;
-}
-
-interface IStateProvider extends angular.IServiceProvider {
-    state(name: string, config: IComponentState): IStateProvider;
-    state(config: IComponentState): IStateProvider;
-    decorator(name?: string, decorator?: (state: IComponentState, parent: Function) => any): any;
-}
-
 /** @ngInject */
-function routesConfig($stateProvider: IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider, $locationProvider: angular.ILocationProvider) {
+function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider, $locationProvider: angular.ILocationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
