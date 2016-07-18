@@ -37,7 +37,11 @@ class TodoTextInputController {
 }
 
 export const TodoTextInput = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/TodoTextInput.html',
+<% } else { -%>
+  template: require('./TodoTextInput.html'),
+<% } -%>
   controller: TodoTextInputController,
   bindings: {
     onSave: '&',

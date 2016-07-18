@@ -24,7 +24,11 @@ class TodoItemController {
 }
 
 export const TodoItem: angular.IComponentOptions = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/TodoItem.html',
+<% } else { -%>
+  template: require('./TodoItem.html'),
+<% } -%>
   controller: TodoItemController,
   bindings: {
     todo: '<',

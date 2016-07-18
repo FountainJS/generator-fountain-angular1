@@ -1,7 +1,11 @@
 var todoFilters = require('../constants/TodoFilters');
 
 module.exports = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/Footer.html',
+<% } else { -%>
+  template: require('./Footer.html'),
+<% } -%>
   controller: Footer,
   bindings: {
     completedCount: '<',

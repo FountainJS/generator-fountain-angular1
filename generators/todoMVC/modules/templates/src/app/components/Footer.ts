@@ -25,7 +25,11 @@ class FooterController {
 }
 
 export const Footer: angular.IComponentOptions = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/Footer.html',
+<% } else { -%>
+  template: require('./Footer.html'),
+<% } -%>
   controller: FooterController,
   bindings: {
     completedCount: '<',

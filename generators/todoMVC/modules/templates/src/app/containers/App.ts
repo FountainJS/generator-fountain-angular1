@@ -12,6 +12,10 @@ class AppController {
 }
 
 export const App: angular.IComponentOptions = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/containers/App.html',
+<% } else { -%>
+  template: require('./App.html'),
+<% } -%>
   controller: AppController
 };

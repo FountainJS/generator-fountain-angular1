@@ -1,10 +1,11 @@
 var visibilityFilters = require('../constants/VisibilityFilters');
 
 module.exports = {
-  templateUrl: 'app/components/MainSection.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/MainSection.html',
   controller: ['todoService', MainSection],
 <% } else { -%>
+  template: require('./MainSection.html'),
   controller: MainSection,
 <% } -%>
   bindings: {

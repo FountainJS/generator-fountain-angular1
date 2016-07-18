@@ -1,5 +1,9 @@
 module.exports = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/TodoItem.html',
+<% } else { -%>
+  template: require('./TodoItem.html'),
+<% } -%>
   controller: TodoItem,
   bindings: {
     todo: '<',

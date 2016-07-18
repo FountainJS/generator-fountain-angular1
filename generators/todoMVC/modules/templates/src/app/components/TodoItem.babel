@@ -23,7 +23,11 @@ class TodoItemController {
 }
 
 export const TodoItem = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/TodoItem.html',
+<% } else { -%>
+  template: require('./TodoItem.html'),
+<% } -%>
   controller: TodoItemController,
   bindings: {
     todo: '<',
