@@ -1,8 +1,9 @@
 module.exports = {
-  templateUrl: 'app/components/Header.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/Header.html',
   controller: ['todoService', Header],
 <% } else { -%>
+  template: require('./Header.html'),
   controller: Header,
 <% } -%>
   bindings: {

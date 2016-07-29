@@ -1,3 +1,7 @@
 export const hello = {
-  templateUrl: '<%- templateUrl %>'
+<% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/hello.html'
+<% } else { -%>
+  template: require('./hello.html')
+<% } -%>
 };

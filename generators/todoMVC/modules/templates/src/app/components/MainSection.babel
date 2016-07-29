@@ -39,7 +39,11 @@ class MainSectionController {
 }
 
 export const MainSection = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/components/MainSection.html',
+<% } else { -%>
+  template: require('./MainSection.html'),
+<% } -%>
   controller: MainSectionController,
   bindings: {
     todos: '=',

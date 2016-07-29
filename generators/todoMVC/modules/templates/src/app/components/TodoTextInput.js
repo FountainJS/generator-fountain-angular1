@@ -1,8 +1,9 @@
 module.exports = {
-  templateUrl: 'app/components/TodoTextInput.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/TodoTextInput.html',
   controller: ['todoService', '$window', '$timeout', TodoTextInput],
 <% } else { -%>
+  template: require('./TodoTextInput.html'),
   controller: TodoTextInput,
 <% } -%>
   bindings: {

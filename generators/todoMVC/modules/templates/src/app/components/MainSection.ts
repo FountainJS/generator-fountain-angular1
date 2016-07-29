@@ -46,10 +46,11 @@ class MainSectionController {
 }
 
 export const MainSection: angular.IComponentOptions = {
-  templateUrl: 'app/components/MainSection.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/MainSection.html',
   controller: ['todoService', MainSectionController],
 <% } else { -%>
+  template: require('./MainSection.html'),
   controller: MainSectionController,
 <% } -%>
   bindings: {

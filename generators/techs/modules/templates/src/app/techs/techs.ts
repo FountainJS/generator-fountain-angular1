@@ -24,10 +24,11 @@ class TechsController {
 }
 
 export const techs: angular.IComponentOptions = {
-  templateUrl: 'app/techs/techs.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/techs/techs.html',
   controller: ['$http', TechsController]
 <% } else { -%>
+  template: require('./techs.html'),
   controller: TechsController
 <% } -%>
 };

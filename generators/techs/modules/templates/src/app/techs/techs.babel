@@ -10,6 +10,10 @@ class TechsController {
 }
 
 export const techs = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/techs/techs.html',
+<% } else { -%>
+  template: require('./techs.html'),
+<% } -%>
   controller: TechsController
 };

@@ -9,6 +9,10 @@ class AppController {
 }
 
 export const App = {
+<% if (modules === 'systemjs') { -%>
   templateUrl: 'app/containers/App.html',
+<% } else { -%>
+  template: require('./App.html'),
+<% } -%>
   controller: AppController
 };

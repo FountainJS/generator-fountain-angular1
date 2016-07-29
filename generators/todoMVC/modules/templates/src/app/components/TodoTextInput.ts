@@ -43,10 +43,11 @@ class TodoTextInputController {
 }
 
 export const TodoTextInput: angular.IComponentOptions = {
-  templateUrl: 'app/components/TodoTextInput.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/TodoTextInput.html',
   controller: ['todoService', '$window', '$timeout', TodoTextInputController],
 <% } else { -%>
+  template: require('./TodoTextInput.html'),
   controller: TodoTextInputController,
 <% } -%>
   bindings: {

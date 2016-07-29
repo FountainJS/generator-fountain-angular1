@@ -17,10 +17,11 @@ class HeaderController {
 }
 
 export const Header: angular.IComponentOptions = {
-  templateUrl: 'app/components/Header.html',
 <% if (modules === 'systemjs') { -%>
+  templateUrl: 'app/components/Header.html',
   controller: ['todoService', HeaderController],
 <% } else { -%>
+  template: require('./Header.html'),
   controller: HeaderController,
 <% } -%>
   bindings: {
