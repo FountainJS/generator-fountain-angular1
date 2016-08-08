@@ -1,7 +1,10 @@
 export const hello = {
 <% if (modules === 'systemjs') { -%>
-  templateUrl: 'app/hello.html'
+  templateUrl: 'app/hello.html',
 <% } else { -%>
-  template: require('./hello.html')
+  template: require('./hello.html'),
 <% } -%>
+  controller: function () { // eslint-disable-line babel/object-shorthand
+    this.hello = 'Hello World!';
+  }
 };
