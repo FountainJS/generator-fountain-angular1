@@ -26,7 +26,7 @@
     "generator-fountain-gulp": "^0.6.0"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "ava": "^0.16.0",
     "babel-eslint": "^6.0.2",
     "chai": "^3.4.1",
     "chai-spies": "^0.7.1",

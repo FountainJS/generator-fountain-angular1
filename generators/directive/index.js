@@ -10,7 +10,7 @@ module.exports = fountain.Base.extend({
       directiveName: lowerCase(name),
       modules: this.config.get('props').modules,
       js: this.config.get('props').js,
-      framework: this.config.get('props').framework,
+      framework: 'angular1',
       name,
       typings
     };
