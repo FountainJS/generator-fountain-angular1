@@ -4,7 +4,7 @@ export const hello = {
 <% } else { -%>
   template: require('./hello.html'),
 <% } -%>
-  controller: function () { // eslint-disable-line babel/object-shorthand
+  controller() {
     this.hello = 'Hello World!';
   }
 };
