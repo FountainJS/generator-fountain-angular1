@@ -1,8 +1,8 @@
 {
   "name": "generator-fountain-angular1",
   "version": "0.6.0",
-  "description": "Yeoman 'fountain' generator to start a webapp with Angular 1",
-  "homepage": "",
+  "description": "Yeoman Fountain generator to scaffold a webapp with Angular 1 written in ES6 (Babel), TypeScript through Webpack or SystemJS including tools Gulp 4, ESLint, Browsersync and Karma",
+  "homepage": "http://fountainjs.io/",
   "repository": "fountainjs/generator-fountain-angular1",
   "author": "The Fountain Team",
   "contributors": [
