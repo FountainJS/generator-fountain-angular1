@@ -2,7 +2,7 @@ import visibilityFilters from '../constants/VisibilityFilters';
 import {TodoService, Todo} from '../todos/todos';
 
 class MainSectionController {
-  selectedFilter: Function;
+  selectedFilter: any;
   filter: string;
   completeReducer: Function;
   todos: any[];
