@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/index.d.ts" />
-
 describe('Footer component', () => {
   beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('footerComponent', () => {
@@ -48,4 +46,3 @@ describe('Footer component', () => {
     expect(component.onShow).toHaveBeenCalledWith({filter: 'show_all'});
   }));
 });
-

@@ -1,5 +1,3 @@
-/// <reference path="../../typings/index.d.ts" />
-
 describe('header component', () => {
   beforeEach(angular.mock.module('app', ($provide: ng.auto.IProvideService) => {
     $provide.factory('fountainHeader', () => {

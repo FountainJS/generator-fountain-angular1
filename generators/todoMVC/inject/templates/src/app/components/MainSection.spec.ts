@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/index.d.ts" />
-
 describe('MainSection component', () => {
   class MockTodoService {
     addTodo() {return; }
