@@ -34,6 +34,9 @@ test(`Add angular deps to package.json dependencies`, t => {
   context.props = {js: 'babel'};
   TestUtils.call(context, 'configuring');
   t.is(context.mergeJson['package.json'].dependencies.angular, '^1.5.0');
+  t.is(context.mergeJson['package.json'].devDependencies['@types/angular'], '^1.5.16');
+  t.is(context.mergeJson['package.json'].devDependencies['@types/angular-mocks'], '^1.5.5');
+  t.is(context.mergeJson['package.json'].devDependencies['@types/jquery'], '^2.0.33');
   t.is(context.mergeJson['package.json'].devDependencies['angular-mocks'], '^1.5.0');
   t.is(context.mergeJson['package.json'].devDependencies['gulp-angular-templatecache'], '^1.8.0');
 });
@@ -42,6 +45,7 @@ test(`Add 'angular-ui-router' to package.json dependencies`, t => {
   context.props = {router: 'uirouter'};
   TestUtils.call(context, 'configuring');
   t.is(context.mergeJson['package.json'].dependencies['angular-ui-router'], '1.0.0-beta.1');
+  t.is(context.mergeJson['package.json'].devDependencies['@types/angular-ui-router'], '^1.1.34');
 });
 
 test(`Not add any router to package.json dependencies`, t => {

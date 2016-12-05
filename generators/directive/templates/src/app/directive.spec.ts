@@ -1,5 +1,3 @@
-/// <reference path="<%- typings %>" />
-
 <% if (modules !== 'inject') { -%>
 <% include modules/directive.spec.header.ts %>
 <% } -%>

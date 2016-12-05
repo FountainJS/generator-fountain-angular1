@@ -1,5 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
-
 import * as angular from 'angular';
 import 'todomvc-app-css/index.css<%- modules === 'systemjs' ? '!' : '' %>';
 

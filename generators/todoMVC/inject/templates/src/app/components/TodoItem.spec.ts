@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/index.d.ts" />
-
 describe('TodoItem component', () => {
   beforeEach(angular.mock.module('app', $provide => {
     $provide.factory('todoItem', () => {

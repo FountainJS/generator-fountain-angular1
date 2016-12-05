@@ -49,6 +49,9 @@ module.exports = fountain.Base.extend({
         angular: '^1.5.0'
       },
       devDependencies: {
+        '@types/angular': '^1.5.16',
+        '@types/angular-mocks': '^1.5.5',
+        '@types/jquery': '^2.0.33',
         'angular-mocks': '^1.5.0',
         'gulp-angular-templatecache': '^1.8.0'
       }
@@ -57,6 +60,9 @@ module.exports = fountain.Base.extend({
       this.mergeJson('package.json', {
         dependencies: {
           'angular-ui-router': '1.0.0-beta.1'
+        },
+        devDependencies: {
+          '@types/angular-ui-router': '^1.1.34'
         }
       });
     }
