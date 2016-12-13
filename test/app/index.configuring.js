@@ -44,7 +44,7 @@ test(`Add angular deps to package.json dependencies`, t => {
 test(`Add 'angular-ui-router' to package.json dependencies`, t => {
   context.props = {router: 'uirouter'};
   TestUtils.call(context, 'configuring');
-  t.is(context.mergeJson['package.json'].dependencies['angular-ui-router'], '1.0.0-beta.1');
+  t.is(context.mergeJson['package.json'].dependencies['angular-ui-router'], '1.0.0-beta.3');
   t.is(context.mergeJson['package.json'].devDependencies['@types/angular-ui-router'], '^1.1.34');
 });
 
