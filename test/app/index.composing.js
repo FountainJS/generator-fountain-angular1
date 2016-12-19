@@ -29,8 +29,8 @@ test(`Call this.composeWith twice when modules is 'webpack'`, () => {
     skipCache: context.props.skipCache
   };
   expect(spy).to.have.been.called.twice();
-  expect(spy).to.have.been.called.with(`fountain-angular1:techs`, {options}, {local: require.resolve('../../generators/techs/modules')});
-  expect(spy).to.have.been.called.with(`fountain-gulp`, {options}, {local: require.resolve('generator-fountain-gulp/generators/app')});
+  expect(spy).to.have.been.called.with(require.resolve('../../generators/techs/modules'), options);
+  expect(spy).to.have.been.called.with(require.resolve('generator-fountain-gulp/generators/app'), options);
 });
 
 test(`Call this.composeWith twice when modules is 'inject'`, () => {
@@ -49,6 +49,6 @@ test(`Call this.composeWith twice when modules is 'inject'`, () => {
     skipCache: context.props.skipCache
   };
   expect(spy).to.have.been.called.twice();
-  expect(spy).to.have.been.called.with(`fountain-angular1:techs`, {options}, {local: require.resolve('../../generators/techs/inject')});
-  expect(spy).to.have.been.called.with(`fountain-gulp`, {options}, {local: require.resolve('generator-fountain-gulp/generators/app')});
+  expect(spy).to.have.been.called.with(require.resolve('../../generators/techs/inject'), options);
+  expect(spy).to.have.been.called.with(require.resolve('generator-fountain-gulp/generators/app'), options);
 });

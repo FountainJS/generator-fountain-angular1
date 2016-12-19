@@ -81,12 +81,8 @@ module.exports = fountain.Base.extend({
       skipCache: this.props.skipCache
     };
 
-    this.composeWith(`fountain-angular1:${this.props.sample}`, {options}, {
-      local: require.resolve(`../${this.props.sample}/${this.props.modules === 'inject' ? 'inject' : 'modules'}`)
-    });
-    this.composeWith('fountain-gulp', {options}, {
-      local: require.resolve('generator-fountain-gulp/generators/app')
-    });
+    this.composeWith(require.resolve(`../${this.props.sample}/${this.props.modules === 'inject' ? 'inject' : 'modules'}`), options);
+    this.composeWith(require.resolve('generator-fountain-gulp/generators/app'), options);
   },
 
   writing() {
