@@ -13,7 +13,8 @@ module.exports = fountain.Base.extend({
       js: this.config.get('props').js,
       framework: 'angular1',
       name,
-      templateUrl: this.config.get('props').modules === 'systemjs' ? `src/${path}/${name}.html` : `${path}/${name}.html`
+      templateUrl: this.config.get('props').modules === 'systemjs' ? `src/${path}/${name}.html` : `${path}/${name}.html`,
+      relativeTemplateUrl: `./${name}.html`
     };
     this.copyTemplate(`src/app/component.js`, `src/${path}/${name}.js`, props);
     this.copyTemplate(`src/app/component.spec.js`, `src/${path}/${name}.spec.js`, props);

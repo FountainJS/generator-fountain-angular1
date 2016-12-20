@@ -23,6 +23,12 @@ test(`Call this.copyTemplate 3 times without 'dir' option`, t => {
   t.true(context.copyTemplate['src/app/component.html'].length > 0);
 });
 
+test(`Use relative templateUrl when modules is 'webpack'`, t => {
+  context.props.modules = 'webpack';
+  TestUtils.call(context, 'writing');
+  t.true(context.copyTemplate['src/app/component.js'].indexOf(`require('./component.html')`) > -1);
+});
+
 test(`Not add 'src' prefix to templateUrl when modules is 'webpack'`, t => {
   context.props.modules = 'webpack';
   TestUtils.call(context, 'writing');
