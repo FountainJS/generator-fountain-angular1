@@ -7,7 +7,7 @@
     />
   <ul class="todo-list">
     <todo-item
-      ng-repeat="todo in $ctrl.todos.filter($ctrl.selectedFilter.filter)"
+      ng-repeat="todo in $ctrl.todos | filter : $ctrl.selectedFilter.filter"
       todo="todo"
       on-destroy="$ctrl.handleDestroy(id)"
       on-change="$ctrl.handleChange(id)"
