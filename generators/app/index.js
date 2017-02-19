@@ -46,23 +46,23 @@ module.exports = fountain.Base.extend({
     this.config.set('props', this.props);
     this.mergeJson('package.json', {
       dependencies: {
-        angular: '^1.5.0'
+        angular: '^1.6.2'
       },
       devDependencies: {
-        '@types/angular': '^1.5.16',
-        '@types/angular-mocks': '^1.5.5',
-        '@types/jquery': '^2.0.33',
-        'angular-mocks': '^1.5.0',
-        'gulp-angular-templatecache': '^1.8.0'
+        '@types/angular': '^1.6.6',
+        '@types/angular-mocks': '^1.5.9',
+        '@types/jquery': '^2.0.40',
+        'angular-mocks': '^1.6.2',
+        'gulp-angular-templatecache': '^2.0.0'
       }
     });
     if (this.props.router === 'uirouter') {
       this.mergeJson('package.json', {
         dependencies: {
-          'angular-ui-router': '1.0.0-beta.3'
+          'angular-ui-router': '1.0.0-rc.1'
         },
         devDependencies: {
-          '@types/angular-ui-router': '^1.1.34'
+          '@types/angular-ui-router': '^1.1.36'
         }
       });
     }
