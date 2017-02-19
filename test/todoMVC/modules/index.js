@@ -43,7 +43,7 @@ test.before(() => {
 
 test(`Add 'todomvc-app-css' to package.json dependencies`, () => {
   TestUtils.call(context, 'configuring');
-  expect(context.mergeJson['package.json'].dependencies['todomvc-app-css']).to.equal('^2.0.4');
+  expect(context.mergeJson['package.json'].dependencies['todomvc-app-css']).to.equal('^2.0.6');
 });
 
 test(`Call this.copyTemplate 24 times when js is different of 'typescript'`, t => {
