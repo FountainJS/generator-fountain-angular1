@@ -6,7 +6,7 @@ module.exports = fountain.Base.extend({
   configuring() {
     this.mergeJson('package.json', {
       dependencies: {
-        'todomvc-app-css': '^2.0.4'
+        'todomvc-app-css': '^2.0.6'
       }
     });
   },

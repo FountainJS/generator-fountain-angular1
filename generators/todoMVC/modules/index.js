@@ -6,7 +6,7 @@ module.exports = fountain.Base.extend({
   configuring() {
     this.mergeJson('package.json', {
       dependencies: {
-        'todomvc-app-css': '^2.0.4'
+        'todomvc-app-css': '^2.0.6'
       }
     });
   },
@@ -45,7 +45,7 @@ module.exports = fountain.Base.extend({
       files.forEach(file => {
         const prefix = this.options.modules === 'systemjs' ? 'src/' : '';
         const templateUrl = file.replace(
-          /^src\/(.*\/[^\.]*).*$/,
+          /^src\/(.*\/[^.]*).*$/,
           `${prefix}$1.html`
         );
         this.copyTemplate(file, file, {templateUrl});
